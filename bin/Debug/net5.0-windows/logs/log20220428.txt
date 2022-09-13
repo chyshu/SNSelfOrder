@@ -1,0 +1,11 @@
+[Header]2022-04-28 09:49:36,300 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-04-28 09:49:36,312 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\PRSelfOrder_GIOV2\PRSelfOrder\PRSelfOrder
+2022-04-28 09:49:36,314 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-04-28 09:49:36,314 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\PRSelfOrder_GIOV2\PRSelfOrder\PRSelfOrder
+2022-04-28 09:49:36,314 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\PRSelfOrder_GIOV2\PRSelfOrder\PRSelfOrder\db\prposdb.db3
+2022-04-28 09:49:37,044 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-04-28 09:49:37,044 [ 1] INFO  SNSelfOrder.App: dd/MM/yyyy
+2022-04-28 09:49:37,044 [ 1] INFO  SNSelfOrder.App: HH:mm:ss
+2022-04-28 09:49:40,680 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"4C-72-B9-F8-CA-D1","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-04-28 09:49:41,150 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"","MAC":"","RetCode":"907","Message":"Connection code is registered by another station","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-04-28 09:49:41,191 [ 1] INFO  SNSelfOrder.App: doCheck 

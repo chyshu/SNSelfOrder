@@ -1,0 +1,38 @@
+[Header]2022-08-26 11:51:24,553 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-08-26 11:51:24,722 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\Roger\Desktop\data
+2022-08-26 11:51:24,726 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\Roger\Desktop\data
+2022-08-26 11:51:24,726 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\Roger\Desktop\data
+2022-08-26 11:51:24,727 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\Roger\Desktop\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-08-26 11:51:24,727 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\Roger\Desktop\data
+2022-08-26 11:51:24,728 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\Roger\Desktop\data\db\prposdb.db3
+2022-08-26 11:51:27,485 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-08-26 11:51:27,485 [ 1] INFO  SNSelfOrder.App: en-US
+2022-08-26 11:51:27,485 [ 1] INFO  SNSelfOrder.App: en-US
+2022-08-26 11:51:27,485 [ 1] INFO  SNSelfOrder.App: $
+2022-08-26 11:51:27,485 [ 1] INFO  SNSelfOrder.App: dddd, MMMM d, yyyy
+2022-08-26 11:51:27,485 [ 1] INFO  SNSelfOrder.App: M/d/yyyy
+2022-08-26 11:51:27,485 [ 1] INFO  SNSelfOrder.App: h:mm:ss tt
+2022-08-26 11:51:30,578 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036033","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-08-26 11:51:31,176 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"","MAC":"","RetCode":"909","Message":"Terminal not found","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-08-26 11:51:31,249 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-08-26 11:51:31,251 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :-9
+2022-08-26 12:28:14,921 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036032","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-08-26 12:28:15,358 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036032","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"5f2e03551eb34eb2a82d35acdc353c89","CustomerID":"3","Store_code":"CV","ExpiryDate":"23/03/2023","Pos_Code":"OT WhiteK","Pos_Name":"OT White Kiosk and SENOR Taiwan","PosID":"3","CustomerName":"Orange Tea","Set_Code":"OT CV","AccessCode":"4N2vye1G0/mJpd3fAtegYFwk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-08-26 12:28:15,359 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-08-26 12:29:05,651 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\Roger\Desktop\data\images
+2022-08-26 12:29:05,653 [ 1] INFO  SNSelfOrder.App:  PageImage:15766
+2022-08-26 12:29:05,658 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-08-26 12:29:05,728 [ 1] INFO  SNSelfOrder.App:  posfastkey02:65
+2022-08-26 12:29:05,777 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:39
+2022-08-26 12:29:05,835 [ 1] INFO  SNSelfOrder.App:  psitem:57
+2022-08-26 12:29:05,839 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-08-26 12:29:05,842 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-08-26 12:29:06,020 [ 1] INFO  SNSelfOrder.App:  modifier:18
+2022-08-26 12:29:06,022 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-08-26 12:29:06,714 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:616
+2022-08-26 12:29:06,715 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637971137467149670
+2022-08-26 12:29:07,006 [ 1] INFO  SNSelfOrder.App:  itemmodifier:286
+2022-08-26 12:29:07,006 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637971137470065386
+2022-08-26 12:29:07,116 [ 1] INFO  SNSelfOrder.App:  itemvariety:86
+2022-08-26 12:29:07,126 [ 1] INFO  SNSelfOrder.App:  promotions:5
+2022-08-26 12:29:07,126 [ 1] INFO  SNSelfOrder.App:  end download check 

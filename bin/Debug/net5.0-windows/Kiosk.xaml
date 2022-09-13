@@ -1,0 +1,3085 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                     xmlns:b="http://schemas.microsoft.com/xaml/behaviors"                                            
+                    xmlns:converter="clr-namespace:SNSelfOrder.Helpers">
+        
+
+    <GridLength  x:Key="BannerHeight" >300</GridLength>
+    <GridLength   x:Key="BottomHeight" >90</GridLength>
+    <GridLength x:Key="MenuHeight">220</GridLength>
+    <GridLength x:Key="SoldOutCaption">80</GridLength>
+    
+
+    <sys:Double x:Key="Banner_height">300</sys:Double>
+    <sys:Double x:Key="PaymentBtnHeight">240</sys:Double>
+    <sys:Double x:Key="PaymentBtnWidth">320</sys:Double>
+       
+
+    <Image  x:Key="KeyEarhImage" Source="Resources/earth.png" Width="48"/>
+    <Image  x:Key="KeyEarhImage1" Source="Resources/earth.png" Width="48"/>
+
+    <Style x:Key="ModSetCaptionStyle"  TargetType="TextBlock">
+        <Setter Property="FontSize"
+                Value="24" />
+        <Setter Property="TextWrapping" Value="NoWrap"/>
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="Padding"
+                Value="5" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="#000000" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <LinearGradientBrush x:Key="VarietyButtonBackgroundBrush"
+                         StartPoint="0.5,0"
+                         EndPoint="0.5,1">
+        <GradientStop Color="#FFE06216"
+                      Offset="0.0" />
+        <GradientStop Color="#FFffca18"
+                      Offset="1.0" />
+    </LinearGradientBrush>
+
+    <Style x:Key="styleCalendar" TargetType="{x:Type Calendar}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Calendar}">
+                    <Viewbox Height="450" 
+                         Width="450">
+                        <CalendarItem x:Name="PART_CalendarItem" 
+                                  Background="{TemplateBinding Background}"
+                                  BorderBrush="{TemplateBinding BorderBrush}"
+                                  BorderThickness="{TemplateBinding BorderThickness}"/>
+                    </Viewbox>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="DatePickerStyle" TargetType="{x:Type DatePicker}">
+        <Setter Property="Foreground" Value="#FF333333"/>
+        <Setter Property="IsTodayHighlighted" Value="True"/>
+        <Setter Property="SelectedDateFormat" Value="Long"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="FontSize" Value="20pt" />
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint=".5,0" StartPoint=".5,1">
+                    <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                    <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                    <GradientStop Color="#FF718597" Offset="0.375"/>
+                    <GradientStop Color="#FF617584" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="DatePickerStyle1" TargetType="{x:Type DatePicker}">
+        <Setter Property="Foreground" Value="#FF333333"/>
+        <Setter Property="IsTodayHighlighted" Value="True"/>
+        <Setter Property="SelectedDateFormat" Value="Long"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="FontSize" Value="20pt" />
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint=".5,0" StartPoint=".5,1">
+                    <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                    <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                    <GradientStop Color="#FF718597" Offset="0.375"/>
+                    <GradientStop Color="#FF617584" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DatePicker}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                    BorderThickness="{TemplateBinding BorderThickness}" 
+                    Background="{TemplateBinding Background}" 
+                    Padding="{TemplateBinding Padding}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" To="1" 
+                                        Storyboard.TargetProperty="Opacity" 
+                                        Storyboard.TargetName="PART_DisabledVisual"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid x:Name="PART_Root"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                            <Grid.Resources>
+                                <SolidColorBrush x:Key="DisabledBrush" 
+                                Color="#A5FFFFFF"/>
+                                <ControlTemplate x:Key="DropDownButtonTemplate" TargetType="{x:Type Button}">
+                                    <Grid>
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualStateGroup.Transitions>
+                                                    <VisualTransition GeneratedDuration="0"/>
+                                                    <VisualTransition GeneratedDuration="0:0:0.1"
+                                                    To="MouseOver"/>
+                                                    <VisualTransition GeneratedDuration="0:0:0.1" 
+                                                    To="Pressed"/>
+                                                </VisualStateGroup.Transitions>
+                                                <VisualState x:Name="Normal"/>
+                                                <VisualState x:Name="MouseOver">
+                                                    <Storyboard>
+                                                        <ColorAnimation Duration="0" 
+                                                        To="#FF448DCA" 
+                                                        Storyboard.TargetProperty="(Border.Background).
+                                                        (SolidColorBrush.Color)" 
+                                                        Storyboard.TargetName="Background"/>
+                                                        <ColorAnimationUsingKeyFrames BeginTime="0" 
+                                                        Duration="00:00:00.001" 
+                                                        Storyboard.TargetProperty="(Border.Background).
+                                                        (GradientBrush.GradientStops)[3].
+                                                        (GradientStop.Color)" 
+                                                        Storyboard.TargetName="BackgroundGradient">
+                                                            <SplineColorKeyFrame KeyTime="0" 
+                                                            Value="#7FFFFFFF"/>
+                                                        </ColorAnimationUsingKeyFrames>
+                                                        <ColorAnimationUsingKeyFrames BeginTime="0" 
+                                                        Duration="00:00:00.001"
+                                                        Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[2].(GradientStop.Color)" 
+                                                        Storyboard.TargetName="BackgroundGradient">
+                                                            <SplineColorKeyFrame KeyTime="0" 
+                                                            Value="#CCFFFFFF"/>
+                                                        </ColorAnimationUsingKeyFrames>
+                                                        <ColorAnimationUsingKeyFrames BeginTime="0" 
+                                                        Duration="00:00:00.001" 
+							                            Storyboard.TargetProperty="(Border.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" 
+                                                                                      Storyboard.TargetName="BackgroundGradient">
+                                                            <SplineColorKeyFrame KeyTime="0" 
+                                                            Value="#F2FFFFFF"/>
+                                                        </ColorAnimationUsingKeyFrames>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Pressed">
+                                                    <Storyboard>
+                                                        <ColorAnimationUsingKeyFrames BeginTime="0" 
+                                                        Duration="00:00:00.001" 
+                                                        Storyboard.TargetProperty="(Border.Background).
+                                                        (SolidColorBrush.Color)" 
+                                                        Storyboard.TargetName="Background">
+                                                            <SplineColorKeyFrame KeyTime="0" 
+                                                            Value="#FF448DCA"/>
+                                                        </ColorAnimationUsingKeyFrames>
+                                                        <DoubleAnimationUsingKeyFrames BeginTime="0" 
+                                                        Duration="00:00:00.001" 
+                                                        Storyboard.TargetProperty=
+                                                        "(UIElement.Opacity)" 
+                                                        Storyboard.TargetName="Highlight">
+                                                            <SplineDoubleKeyFrame KeyTime="0" 
+                                                            Value="1"/>
+                                                        </DoubleAnimationUsingKeyFrames>
+                                                        <ColorAnimationUsingKeyFrames BeginTime="0" 
+                                                        Duration="00:00:00.001" 
+                                                        Storyboard.TargetProperty="(Border.Background).
+                                                        (GradientBrush.GradientStops)[1].
+                                                        (GradientStop.Color)" 
+                                                        Storyboard.TargetName="BackgroundGradient">
+                                                            <SplineColorKeyFrame KeyTime="0" 
+                                                            Value="#EAFFFFFF"/>
+                                                        </ColorAnimationUsingKeyFrames>
+                                                        <ColorAnimationUsingKeyFrames BeginTime="0" 
+                                                        Duration="00:00:00.001" 
+                                                        Storyboard.TargetProperty="(Border.Background).
+                                                        (GradientBrush.GradientStops)[2].
+                                                        (GradientStop.Color)" 
+                                                        Storyboard.TargetName="BackgroundGradient">
+                                                            <SplineColorKeyFrame KeyTime="0" 
+                                                            Value="#C6FFFFFF"/>
+                                                        </ColorAnimationUsingKeyFrames>
+                                                        <ColorAnimationUsingKeyFrames BeginTime="0" 
+                                                        Duration="00:00:00.001" 
+                                                        Storyboard.TargetProperty="(Border.Background).
+                                                        (GradientBrush.GradientStops)[3].
+                                                        (GradientStop.Color)" 
+                                                        Storyboard.TargetName="BackgroundGradient">
+                                                            <SplineColorKeyFrame KeyTime="0" 
+                                                            Value="#6BFFFFFF"/>
+                                                        </ColorAnimationUsingKeyFrames>
+                                                        <ColorAnimationUsingKeyFrames BeginTime="0" 
+                                                        Duration="00:00:00.001" 
+                                                        Storyboard.TargetProperty="(Border.Background).
+                                                        (GradientBrush.GradientStops)[0].
+                                                        (GradientStop.Color)" 
+                                                        Storyboard.TargetName="BackgroundGradient">
+                                                            <SplineColorKeyFrame KeyTime="0" 
+                                                            Value="#F4FFFFFF"/>
+                                                        </ColorAnimationUsingKeyFrames>
+                                                    </Storyboard>
+                                                </VisualState>
+                                                <VisualState x:Name="Disabled"/>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+                                        <Grid Background="#11FFFFFF" 
+                                        FlowDirection="LeftToRight"  HorizontalAlignment="Center" Height="45" 
+                                        Margin="0" VerticalAlignment="Center"     Width="45">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="20*"/>
+                                                <ColumnDefinition Width="20*"/>
+                                                <ColumnDefinition Width="20*"/>
+                                                <ColumnDefinition Width="20*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="23*"/>
+                                                <RowDefinition Height="19*"/>
+                                                <RowDefinition Height="19*"/>
+                                                <RowDefinition Height="19*"/>
+                                            </Grid.RowDefinitions>
+                                            <Border x:Name="Highlight"    BorderBrush="#FF45D6FA"    BorderThickness="1" Grid.ColumnSpan="4" 
+                                            CornerRadius="0,0,1,1" Margin="-1"   Opacity="0" Grid.Row="0"     Grid.RowSpan="4"/>
+                                            <Border x:Name="Background"   BorderBrush="#FFFFFFFF" BorderThickness="1" Background="#FF1F3B53" 
+                                            Grid.ColumnSpan="4" CornerRadius=".5" Margin="0,-1,0,0" Opacity="1"   Grid.Row="1" Grid.RowSpan="3"/>
+                                            <Border x:Name="BackgroundGradient" BorderBrush="#BF000000" BorderThickness="1" Grid.ColumnSpan="4" 
+                                            CornerRadius=".5" Margin="0,-1,0,0" Opacity="1" Grid.Row="1" Grid.RowSpan="3">
+                                                <Border.Background>
+                                                    <LinearGradientBrush EndPoint=".7,1" StartPoint=".7,0">
+                                                        <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                                                        <GradientStop Color="#F9FFFFFF" Offset="0.375"/>
+                                                        <GradientStop Color="#E5FFFFFF" Offset="0.625"/>
+                                                        <GradientStop Color="#C6FFFFFF" Offset="1"/>
+                                                    </LinearGradientBrush>
+                                                </Border.Background>
+                                            </Border>
+                                            <Rectangle Grid.ColumnSpan="4" 
+                                            Grid.RowSpan="1" StrokeThickness="1">
+                                                <Rectangle.Fill>
+                                                    <LinearGradientBrush EndPoint="0.3,-1.1" 
+                                                    StartPoint="0.46,1.6">
+                                                        <GradientStop Color="#FF4084BD"/>
+                                                        <GradientStop Color="#FFAFCFEA"  Offset="1"/>
+                                                    </LinearGradientBrush>
+                                                </Rectangle.Fill>
+                                                <Rectangle.Stroke>
+                                                    <LinearGradientBrush EndPoint="0.48,-1"   StartPoint="0.48,1.25">
+                                                        <GradientStop Color="#FF494949"/>
+                                                        <GradientStop Color="#FF9F9F9F" Offset="1"/>
+                                                    </LinearGradientBrush>
+                                                </Rectangle.Stroke>
+                                            </Rectangle>
+                                            
+                                            <TextBlock Margin="2,0" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="4" 
+                                            Grid.Column="0" Text="{Binding Source={x:Static sys:DateTime.Now},StringFormat=MM}"
+                                                       HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="18" 
+                                                       FontFamily="Arial Bold" />
+                                            <Ellipse Grid.ColumnSpan="4"  Fill="#FFFFFFFF" HorizontalAlignment="Center" 
+                                                 Height="3" StrokeThickness="0"  VerticalAlignment="Center" Width="3"/>
+                                            <Border x:Name="DisabledVisual" BorderBrush="#B2FFFFFF" BorderThickness="1" 
+                                               Grid.ColumnSpan="4" CornerRadius="0,0,.5,.5" Opacity="0" Grid.Row="0" Grid.RowSpan="4"/>
+                                        </Grid>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Grid.Resources>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="80"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="PART_Button" Grid.Column="1"  Foreground="{TemplateBinding Foreground}" 
+                                Focusable="False" HorizontalAlignment="Center" Margin="3,0,3,0" Grid.Row="0" 
+                                 Template="{StaticResource DropDownButtonTemplate}"  VerticalAlignment="Center" Command="{Binding CalendarCommand}" />
+                            <DatePickerTextBox x:Name="PART_TextBox" Grid.Column="0"  HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalAlignment}" Focusable="False" 
+                                HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Grid.Row="0" FontSize="{TemplateBinding FontSize}"
+                                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"  />
+                            <!-- ="{Binding Path=SelectedDate, Converter={StaticResource DateTimeConverter }, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" /> -->
+                            <Grid x:Name="PART_DisabledVisual"   Grid.ColumnSpan="2" Grid.Column="0"   IsHitTestVisible="False" Opacity="0"     Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Rectangle Grid.Column="0" Fill="#A5FFFFFF"  RadiusY="1" Grid.Row="0" RadiusX="1"/>
+                                <Rectangle Grid.Column="1" Fill="#A5FFFFFF"  Height="18" Margin="3,0,3,0" 
+                                RadiusY="1" Grid.Row="0" RadiusX="1" Width="19"/>
+                                <Popup x:Name="PART_Popup" AllowsTransparency="True" Placement="Bottom" 
+                                   PlacementTarget="{Binding ElementName=PART_TextBox}" StaysOpen="false"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding Source={x:Static SystemParameters.HighContrast}}" Value="false">
+                            <Setter Property="Foreground" 
+                            TargetName="PART_TextBox" Value="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ModifierImageStyle" TargetType="Image">
+        <Setter Property="Width" Value="150" />
+        <Setter Property="HorizontalAlignment"  Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="Margin" Value="1"/>
+    </Style>
+
+
+    <!-- this is the style used by 'go' buttons. -->
+    <Style x:Key="VarietyButtonStyle"
+           TargetType="Button">
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="Background"
+                Value="{DynamicResource VarietyButtonBackgroundBrush}" />
+        <Setter Property="FontSize"
+                Value="{DynamicResource ButtonFontSize}" />
+        <Setter Property="BorderBrush"
+                Value="#FFf29819" />
+        <Setter Property="BorderThickness"
+                Value="{DynamicResource ButtonBorderThickness}" />
+        <Setter Property="Padding"
+                Value="{DynamicResource ButtonPadding}" />
+        <Setter Property="MinWidth"
+                Value="100" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="HoverOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" />
+                        </Storyboard>
+                        <Storyboard x:Key="HoverOff">
+                            <DoubleAnimation    Duration="00:00:00.5000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0" />
+
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="0.84" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="0.84" />
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOff">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="1" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="1" />
+                        </Storyboard>
+
+                    </ControlTemplate.Resources>
+                    <Grid x:Name="Grid">
+                        <Grid x:Name="ContentGrid">
+                            <Grid.LayoutTransform>
+                                <ScaleTransform x:Name="BackgroundScale"
+                                                CenterX="0.5"
+                                                CenterY="0.5"
+                                                ScaleX="1"
+                                                ScaleY="1" />
+                            </Grid.LayoutTransform>
+
+                            <Border x:Name="BackgroundNorm"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}">
+                            </Border>
+                            <Border x:Name="BackgroundOver"
+                                    Background="#33000000"
+                                    BorderBrush="#33000000"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+                            <Border x:Name="BackgroundPressed"
+                                    Background="#33000000"
+                                    BorderBrush="#33000000"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+
+                            <Border x:Name="DisabledVisualElement"
+                                    Background="#FFF1F1F1"
+                                    BorderBrush="#FFB2B2B2"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Visibility="Collapsed" />
+                            <ContentPresenter   x:Name="contentPresenter"
+                                                Content="{TemplateBinding Content}"
+                                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                Margin="{TemplateBinding Padding}" />
+                            <TextBlock  Panel.ZIndex="1"
+                                        x:Name="DisabledOverlay"
+                                        Text="{TemplateBinding Content}"
+                                        Foreground="#FF969696"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}"
+                                        Visibility="Collapsed" />
+                            <!-- not currently used -->
+                            <Border x:Name="FocusVisualElement"
+                                    Margin="1"
+                                    BorderBrush="DarkGreen"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                            <!-- not currently used -->
+                            <Border x:Name="DefaultBorder"
+                                    Margin="1"
+                                    BorderBrush="DarkRed"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                        </Grid>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefault"
+                                 Value="True">
+                            <Setter Property="Opacity"
+                                    TargetName="DefaultBorder"
+                                    Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOff}"
+                                                 x:Name="HoverOff_BeginStoryboard" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOn}" />
+                            </Trigger.EnterActions>
+
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOff}" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOn}" />
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="true" />
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource DisabledForegroundBrush}" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledVisualElement"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledOverlay"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="contentPresenter"
+                                    Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="QtyButtonStyle"
+           TargetType="Button">
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="Background"
+                Value="{DynamicResource VarietyButtonBackgroundBrush}" />
+        <Setter Property="FontSize"
+                Value="{DynamicResource ButtonFontSize}" />
+        <Setter Property="BorderBrush"
+                Value="#FFf29819" />
+        <Setter Property="BorderThickness"
+                Value="{DynamicResource ButtonBorderThickness}" />
+        <Setter Property="Padding"
+                Value="{DynamicResource ButtonPadding}" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="HoverOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" />
+                        </Storyboard>
+                        <Storyboard x:Key="HoverOff">
+                            <DoubleAnimation    Duration="00:00:00.5000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0" />
+
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="0.84" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="0.84" />
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOff">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="1" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="1" />
+                        </Storyboard>
+
+                    </ControlTemplate.Resources>
+                    <Grid x:Name="Grid">
+                        <Grid x:Name="ContentGrid">
+                            <Grid.LayoutTransform>
+                                <ScaleTransform x:Name="BackgroundScale"
+                                                CenterX="0.5"
+                                                CenterY="0.5"
+                                                ScaleX="1"
+                                                ScaleY="1" />
+                            </Grid.LayoutTransform>
+
+                            <Border x:Name="BackgroundNorm"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}">
+                            </Border>
+                            <Border x:Name="BackgroundOver"
+                                    Background="#33000000"
+                                    BorderBrush="#33000000"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+                            <Border x:Name="BackgroundPressed"
+                                    Background="#33000000"
+                                    BorderBrush="#33000000"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+
+                            <Border x:Name="DisabledVisualElement"
+                                    Background="#FFF1F1F1"
+                                    BorderBrush="#FFB2B2B2"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Visibility="Collapsed" />
+                            <ContentPresenter   x:Name="contentPresenter"
+                                                Content="{TemplateBinding Content}"
+                                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                Margin="{TemplateBinding Padding}" />
+                            <TextBlock  Panel.ZIndex="1"
+                                        x:Name="DisabledOverlay"
+                                        Text="{TemplateBinding Content}"
+                                        Foreground="#FF969696"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}"
+                                        Visibility="Collapsed" />
+                            <!-- not currently used -->
+                            <Border x:Name="FocusVisualElement"
+                                    Margin="1"
+                                    BorderBrush="DarkGreen"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                            <!-- not currently used -->
+                            <Border x:Name="DefaultBorder"
+                                    Margin="1"
+                                    BorderBrush="DarkRed"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                        </Grid>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefault"
+                                 Value="True">
+                            <Setter Property="Opacity"
+                                    TargetName="DefaultBorder"
+                                    Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOff}"
+                                                 x:Name="HoverOff_BeginStoryboard" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOn}" />
+                            </Trigger.EnterActions>
+
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOff}" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOn}" />
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="true" />
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource DisabledForegroundBrush}" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledVisualElement"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledOverlay"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="contentPresenter"
+                                    Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- this is the template for how each main item is to be displayed on the listbox -->
+    <DataTemplate x:Key="MainItemCardDataTemplate">
+        <Grid HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch"
+              Visibility="{Binding IsVisible, Converter={StaticResource VisibilityConverter}}">
+            <Border Background="{DynamicResource MainItemCardBackgroundBrush}"
+                    BorderBrush="{DynamicResource MainItemCardBorderBrush}"
+                    BorderThickness="{DynamicResource MainItemCardBorderThickness}"
+                    CornerRadius="{DynamicResource MainItemCardCornerRadius}"/>
+            <Grid Margin="0">
+                <Image  HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        MinWidth="170"
+                        MinHeight="200"
+                        Margin="0"
+                        Source="{Binding Picture,Converter={StaticResource BitmapImageConverter}}">
+                </Image>
+            </Grid>
+        </Grid>
+    </DataTemplate>
+
+    <sys:Double x:Key="ModifierSelectedCircleSize">32</sys:Double>
+    <CornerRadius x:Key="ModifierSelectedRadius">32</CornerRadius>
+
+    <Style x:Key="ModifierSelectedStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="White"/>
+
+    </Style>
+
+    <DataTemplate x:Key="ModifierTemplate" >
+        <Grid>
+
+            <Border Background="{DynamicResource ModifierBackgroundBrush}"
+                                                                BorderBrush="{DynamicResource ModifierBorderBrush}"
+                                                                BorderThickness="{DynamicResource ModifierBorderThickness }"
+                                                                CornerRadius="{DynamicResource ModifierBorderCornerRadius}"/>
+            <Image  Style="{DynamicResource ModifierImageStyle }"                
+                    Source="{Binding Picture,Converter={StaticResource BitmapImageConverter}}" />
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Left"  Height="{StaticResource ModifierSelectedCircleSize}" Width="{StaticResource ModifierSelectedCircleSize}">
+                <Border
+                    Width="{StaticResource ModifierSelectedCircleSize}"
+                    Height="{StaticResource ModifierSelectedCircleSize}"
+                    BorderBrush="Black"
+                    BorderThickness="1"
+                    Background="#FFE06216"  VerticalAlignment="Center"
+                    Visibility="{Binding IsVisible, Converter={StaticResource VisibilityConverter}}"
+                    CornerRadius="{StaticResource ModifierSelectedRadius}">
+
+                    <TextBlock Text="{Binding SelectedQty}"  Style="{DynamicResource ModifierSelectedStyle }"  VerticalAlignment="Center"
+                               Visibility="{Binding IsVisible, Converter={StaticResource VisibilityConverter}}"
+                         TextAlignment="Center" />
+
+                </Border>
+
+            </Grid>
+            <Grid VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                <TextBlock Margin="0,0,0,3" Text="{Binding Sprice, StringFormat='\{0:$0.00;$0.00; }'}"  VerticalAlignment="Center"   TextAlignment="Center" 
+                            FontSize="{Binding FontSize}" FontFamily="{Binding FontFamily}" FontWeight= "{Binding FontStyle}">
+                    
+                </TextBlock>
+            </Grid>
+            <Button 
+                Command="{Binding RelativeSource ={RelativeSource FindAncestor, AncestorType={x:Type ListBox},AncestorLevel=2} , Path=DataContext.ModifierClick }" 
+                CommandParameter="{Binding}">
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource TransparentButtonStyle}">
+                        <Setter Property="IsHitTestVisible"
+                                    Value="True" />
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+
+    </DataTemplate>
+    <!-- this is the template for how each modifier item is to be displayed on the listbox -->
+    <DataTemplate x:Key="ModSetTemplate" >
+        <Grid  Background="Transparent"   >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#FFE06216"   >
+                <TextBlock Text="{Binding Path=Caption }"  Style="{StaticResource ModSetCaptionStyle }" />
+            </Grid>
+            <Grid Grid.Row="1"  >
+                <ItemsControl   x:Name="ModifierList"   ItemsSource="{Binding Path=Modifiers}"      >
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel  />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid  >
+                                <Border Background="{DynamicResource ModifierBackgroundBrush}"
+                                                    BorderBrush="{DynamicResource ModifierBorderBrush}"
+                                                    BorderThickness="{DynamicResource ModifierBorderThickness }"
+                                                    CornerRadius="{DynamicResource ModifierBorderCornerRadius}"/>
+                                <Image  HorizontalAlignment="Stretch" 
+                                                    VerticalAlignment="Stretch"                                                                                                       
+                                                    Margin="10"
+                                                    
+                                                    Source="{Binding Picture,Converter={StaticResource BitmapImageConverter}}">
+                                </Image>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+
+                </ItemsControl>
+            </Grid>
+        </Grid>
+    </DataTemplate>
+
+    <Style x:Key="ModSetListBoxStyle"
+        TargetType="ListBox">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+
+        <Setter Property="Background"
+                Value="#FFE06216"/>
+
+        <Setter Property="Margin"
+                Value="0"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility"
+                Value="Disabled"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility"
+                Value="Hidden"/>
+        <Setter Property="ScrollViewer.CanContentScroll"
+                Value="False"/>
+        <Setter Property="ScrollViewer.PanningMode"
+                Value="None"/>
+        <Setter Property="VerticalAlignment"
+                Value="Top"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Left"/>
+
+    </Style>
+
+    <Style x:Key="ModSetContainerStyle"
+           TargetType="ListBoxItem">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                          />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="true">
+                            <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="Transparent"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="true"/>
+                                <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="Transparent"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="ItemCardContainerStyle"
+           TargetType="ListBoxItem">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}"
+                            Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="true">
+                            <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="Transparent"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="true"/>
+                                <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="Transparent"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LayoutItemRootGridStyle"
+           TargetType="Grid">
+
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="Margin"
+                Value="30" />
+    </Style>
+    <Style x:Key="GirdItemDescStyle"  TargetType="Grid">
+        <Setter Property="Background"
+                Value="{DynamicResource ButtonTextBrush}" />
+        <Setter Property="Margin"
+                Value="0" />
+    </Style>
+    <Style x:Key="ItemImagStyle"  TargetType="Rectangle">
+        <Setter Property="Margin"
+                Value="20,20,20,20" />
+    </Style>
+
+    <Style x:Key="ItemNameStyle"  TargetType="TextBlock">
+        <Setter Property="FontSize"
+                Value="30" />
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Margin"
+                Value="10" />
+    </Style>
+
+    <Style x:Key="ItemPriceStyle"  TargetType="TextBlock">
+        <Setter Property="FontSize"
+                Value="30" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="Margin"
+                Value="15,15,15,15" />
+    </Style>
+
+    <Style x:Key="ItemDescriptionStyle"  TargetType="TextBlock">
+        <Setter Property="FontSize"
+                Value="20" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Margin"
+                Value="5" />
+    </Style>
+
+    <Style x:Key="GirdItemDescBorderStyle"
+           TargetType="Border">
+        <Setter Property="Background"
+                Value="{DynamicResource GirdItemDescBackgroundBrush}" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource GirdItemDescBorderBrush}" />
+        <Setter Property="BorderThickness"
+                Value="{DynamicResource GirdItemDescBorderThickness}" />
+        <Setter Property="CornerRadius"
+                Value="{DynamicResource  GirdItemDescBorderCornerRadius}" />
+    </Style>
+
+    <Style x:Key="GirdItemButtonBorderStyle"
+           TargetType="Border">
+        <Setter Property="Background"  Value="#FFFFFFFF" />
+        <Setter Property="BorderBrush" Value="#FF000000" />
+        <Setter Property="BorderThickness"  Value="1,1,1,1" />
+        <Setter Property="CornerRadius" Value="0" />
+    </Style>
+    <Style x:Key="GirdItemButtonStyle"  TargetType="Grid">
+        <Setter Property="Background"
+                Value="{DynamicResource ButtonTextBrush}" />
+        <Setter Property="Margin"
+                Value="0" />
+    </Style>
+    <Style x:Key="ItemButtonBackStyle"  TargetType="Button">
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="Background"
+                Value="{DynamicResource GoButtonBackgroundBrush}" />
+        <Setter Property="FontSize"
+                Value="{DynamicResource ButtonFontSize}" />
+        <Setter Property="BorderBrush"
+                Value="#FFdc5757" />
+        <Setter Property="BorderThickness"
+                Value="{DynamicResource ButtonBorderThickness}" />
+        <Setter Property="Padding"
+                Value="{DynamicResource ButtonPadding}" />
+
+        <Setter Property="Width"
+                Value="200" />
+        <Setter Property="Height"
+                Value="80" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="HoverOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" />
+                        </Storyboard>
+                        <Storyboard x:Key="HoverOff">
+                            <DoubleAnimation    Duration="00:00:00.4000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0" />
+
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="0.84" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="0.84" />
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOff">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="1" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="1" />
+                        </Storyboard>
+
+                    </ControlTemplate.Resources>
+                    <Grid x:Name="Grid">
+                        <Grid x:Name="ContentGrid">
+                            <Grid.LayoutTransform>
+                                <ScaleTransform x:Name="BackgroundScale"
+                                                CenterX="0.5"
+                                                CenterY="0.5"
+                                                ScaleX="1"
+                                                ScaleY="1" />
+                            </Grid.LayoutTransform>
+
+                            <Border x:Name="BackgroundNorm"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}">
+                            </Border>
+                            <Border x:Name="BackgroundOver"
+                                    Background="#33000000"
+                                    BorderBrush="#33000000"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+                            <Border x:Name="BackgroundPressed"
+                                    Background="#33000000"
+                                    BorderBrush="#33000000"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+
+                            <Border x:Name="DisabledVisualElement"
+                                    Background="#FFF1F1F1"
+                                    BorderBrush="#FFB2B2B2"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Visibility="Collapsed" />
+                            <ContentPresenter   x:Name="contentPresenter"
+                                                Content="{TemplateBinding Content}"
+                                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                Margin="{TemplateBinding Padding}" />
+                            <TextBlock  Panel.ZIndex="1"
+                                        x:Name="DisabledOverlay"
+                                        Text="{TemplateBinding Content}"
+                                        Foreground="#FF969696"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}"
+                                        Visibility="Collapsed" />
+                            <!-- not currently used -->
+                            <Border x:Name="FocusVisualElement"
+                                    Margin="1"
+                                    BorderBrush="DarkGreen"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                            <!-- not currently used -->
+                            <Border x:Name="DefaultBorder"
+                                    Margin="1"
+                                    BorderBrush="DarkRed"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                        </Grid>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefault"
+                                 Value="True">
+                            <Setter Property="Opacity"
+                                    TargetName="DefaultBorder"
+                                    Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOff}"
+                                                 x:Name="HoverOff_BeginStoryboard" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOn}" />
+                            </Trigger.EnterActions>
+
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOff}" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOn}" />
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="true" />
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource DisabledForegroundBrush}" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledVisualElement"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledOverlay"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="contentPresenter"
+                                    Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ItemAddButtonStyle"
+           TargetType="Button">
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="Background"
+                Value="{DynamicResource GoButtonBackgroundBrush}" />
+        <Setter Property="FontSize"
+                Value="{DynamicResource ButtonFontSize}" />
+        <Setter Property="FontWeight" 
+                Value="Bold"/>
+        <Setter Property="BorderBrush"
+                Value="#FFf29819" />
+        <Setter Property="BorderThickness"
+                Value="{DynamicResource ButtonBorderThickness}" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="HoverOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" />
+                        </Storyboard>
+                        <Storyboard x:Key="HoverOff">
+                            <DoubleAnimation    Duration="00:00:00.4000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0" />
+
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="0.84" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="0.84" />
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOff">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="1" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="1" />
+                        </Storyboard>
+
+                    </ControlTemplate.Resources>
+                    <Grid x:Name="Grid">
+                        <Grid x:Name="ContentGrid">
+                            <Grid.LayoutTransform>
+                                <ScaleTransform x:Name="BackgroundScale"
+                                                CenterX="0.5"
+                                                CenterY="0.5"
+                                                ScaleX="1"
+                                                ScaleY="1" />
+                            </Grid.LayoutTransform>
+
+                            <Border x:Name="BackgroundNorm"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}">
+                            </Border>
+                            <Border x:Name="BackgroundOver"
+                                    Background="#33000000"
+                                    BorderBrush="#33000000"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+                            <Border x:Name="BackgroundPressed"
+                                    Background="#33000000"
+                                    BorderBrush="#33000000"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+
+                            <Border x:Name="DisabledVisualElement"
+                                    Background="#FFF1F1F1"
+                                    BorderBrush="#FFB2B2B2"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Visibility="Collapsed" />
+                            <ContentPresenter   x:Name="contentPresenter"
+                                                Content="{TemplateBinding Content}"
+                                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                Margin="{TemplateBinding Padding}" />
+                            <TextBlock  Panel.ZIndex="1"
+                                        x:Name="DisabledOverlay"
+                                        Text="{TemplateBinding Content}"
+                                        Foreground="#FF969696"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}"
+                                        Visibility="Collapsed" />
+                            <!-- not currently used -->
+                            <Border x:Name="FocusVisualElement"
+                                    Margin="1"
+                                    BorderBrush="DarkGreen"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                            <!-- not currently used -->
+                            <Border x:Name="DefaultBorder"
+                                    Margin="1"
+                                    BorderBrush="DarkRed"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                        </Grid>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefault"
+                                 Value="True">
+                            <Setter Property="Opacity"
+                                    TargetName="DefaultBorder"
+                                    Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOff}"
+                                                 x:Name="HoverOff_BeginStoryboard" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOn}" />
+                            </Trigger.EnterActions>
+
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOff}" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOn}" />
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="true" />
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource DisabledForegroundBrush}" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledVisualElement"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledOverlay"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="contentPresenter"
+                                    Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="PaymentButtonStyle"  TargetType="Button" >
+
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="Content" 
+                Value="View Order"/>
+        <Setter Property="Background" 
+                Value="Orange"/>
+        <Setter Property="Foreground" 
+                Value="Black"/>
+        <Setter Property="Margin"  Value="10"/>
+        <Setter Property="FontWeight" 
+                Value="Bold"/>
+        <Setter Property="FontSize"
+                Value="{DynamicResource ButtonFontSize}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="HoverOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" />
+                        </Storyboard>
+                        <Storyboard x:Key="HoverOff">
+                            <DoubleAnimation    Duration="00:00:00.4000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0" />
+
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="0.84" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="0.84" />
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOff">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="1" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="1" />
+                        </Storyboard>
+
+                    </ControlTemplate.Resources>
+                    <Grid x:Name="Grid">
+                        <Grid x:Name="ContentGrid">
+                            <Grid.LayoutTransform>
+                                <ScaleTransform x:Name="BackgroundScale"
+                                                CenterX="0.5"
+                                                CenterY="0.5"
+                                                ScaleX="1"
+                                                ScaleY="1" />
+                            </Grid.LayoutTransform>
+
+                            <Border x:Name="BackgroundNorm"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}">
+                            </Border>
+                            <Border x:Name="BackgroundOver"
+                                    Background="{DynamicResource CancelButtonBackgroundHoverBrush}"
+                                    BorderBrush="{DynamicResource CancelButtonBorderHoverBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+                            <Border x:Name="BackgroundPressed"
+                                    Background="{DynamicResource CancelButtonBackgroundPressedBrush}"
+                                    BorderBrush="{DynamicResource CancelButtonBorderPressedBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+
+                            <Border x:Name="DisabledVisualElement"
+                                    Background="#FFf29819"
+                                    BorderBrush="#FFF18019"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Visibility="Collapsed" />
+                            <ContentPresenter   x:Name="contentPresenter"
+                                                Content="{TemplateBinding Content}"
+                                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                Margin="{TemplateBinding Padding}" />
+                            <TextBlock  Panel.ZIndex="1"
+                                        x:Name="DisabledOverlay"
+                                        Text="{TemplateBinding Content}"
+                                        Foreground="Black"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}"
+                                        Visibility="Collapsed" />
+                            <!-- not currently used -->
+                            <Border x:Name="FocusVisualElement"
+                                    Margin="1"
+                                    BorderBrush="DarkGreen"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                            <!-- not currently used -->
+                            <Border x:Name="DefaultBorder"
+                                    Margin="1"
+                                    BorderBrush="DarkRed"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                        </Grid>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefault"
+                                 Value="True">
+                            <Setter Property="Opacity"
+                                    TargetName="DefaultBorder"
+                                    Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOff}"
+                                                 x:Name="HoverOff_BeginStoryboard" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOn}" />
+                            </Trigger.EnterActions>
+
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOff}" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOn}" />
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="true" />
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource DisabledForegroundBrush}" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledVisualElement"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledOverlay"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="contentPresenter"
+                                    Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ItemGoButtonStyle"
+           TargetType="Button" >
+
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="Content" 
+                Value="View Order"/>
+        <Setter Property="Background" 
+                Value="Orange"/>
+        <Setter Property="Foreground" 
+                Value="Black"/>
+
+        <Setter Property="FontWeight" 
+                Value="Bold"/>
+        <Setter Property="FontSize"
+                Value="{DynamicResource ButtonFontSize}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="HoverOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" />
+                        </Storyboard>
+                        <Storyboard x:Key="HoverOff">
+                            <DoubleAnimation    Duration="00:00:00.4000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0" />
+
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="0.84" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="0.84" />
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOff">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="1" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="1" />
+                        </Storyboard>
+
+                    </ControlTemplate.Resources>
+                    <Grid x:Name="Grid">
+                        <Grid x:Name="ContentGrid">
+                            <Grid.LayoutTransform>
+                                <ScaleTransform x:Name="BackgroundScale"
+                                                CenterX="0.5"
+                                                CenterY="0.5"
+                                                ScaleX="1"
+                                                ScaleY="1" />
+                            </Grid.LayoutTransform>
+
+                            <Border x:Name="BackgroundNorm"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}">
+                            </Border>
+                            <Border x:Name="BackgroundOver"
+                                    Background="{DynamicResource CancelButtonBackgroundHoverBrush}"
+                                    BorderBrush="{DynamicResource CancelButtonBorderHoverBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+                            <Border x:Name="BackgroundPressed"
+                                    Background="{DynamicResource CancelButtonBackgroundPressedBrush}"
+                                    BorderBrush="{DynamicResource CancelButtonBorderPressedBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+
+                            <Border x:Name="DisabledVisualElement"
+                                    Background="#FFF1F1F1"
+                                    BorderBrush="#FFB2B2B2"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Visibility="Collapsed" />
+                            <ContentPresenter   x:Name="contentPresenter"
+                                                Content="{TemplateBinding Content}"
+                                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                Margin="{TemplateBinding Padding}" />
+                            <TextBlock  Panel.ZIndex="1"
+                                        x:Name="DisabledOverlay"
+                                        Text="{TemplateBinding Content}"
+                                        Foreground="#FF969696"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}"
+                                        Visibility="Collapsed" />
+                            <!-- not currently used -->
+                            <Border x:Name="FocusVisualElement"
+                                    Margin="1"
+                                    BorderBrush="DarkGreen"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                            <!-- not currently used -->
+                            <Border x:Name="DefaultBorder"
+                                    Margin="1"
+                                    BorderBrush="DarkRed"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                        </Grid>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefault"
+                                 Value="True">
+                            <Setter Property="Opacity"
+                                    TargetName="DefaultBorder"
+                                    Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOff}"
+                                                 x:Name="HoverOff_BeginStoryboard" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOn}" />
+                            </Trigger.EnterActions>
+
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOff}" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOn}" />
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="true" />
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource DisabledForegroundBrush}" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledVisualElement"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledOverlay"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="contentPresenter"
+                                    Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- this is the style used by 'cancel' buttons. -->
+    <Style x:Key="ItemCancelButtonStyle"
+           TargetType="Button"   >
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="Background"
+                Value="#e3e3e3" />
+        <Setter Property="FontSize"
+                Value="{DynamicResource ButtonFontSize}" />
+        <Setter Property="BorderBrush"
+                Value="#e3e3e3" />
+        <Setter Property="FontWeight" 
+                Value="Bold"/>
+        <Setter Property="Content" 
+                Value="BACK"/>
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="BorderThickness"
+                Value="{DynamicResource ButtonBorderThickness}" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="HoverOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" />
+                        </Storyboard>
+                        <Storyboard x:Key="HoverOff">
+                            <DoubleAnimation    Duration="00:00:00.4000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0" />
+
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="0.84" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="0.84" />
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOff">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="1" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="1" />
+                        </Storyboard>
+
+                    </ControlTemplate.Resources>
+                    <Grid x:Name="Grid">
+                        <Grid x:Name="ContentGrid">
+                            <Grid.LayoutTransform>
+                                <ScaleTransform x:Name="BackgroundScale"
+                                                CenterX="0.5"
+                                                CenterY="0.5"
+                                                ScaleX="1"
+                                                ScaleY="1" />
+                            </Grid.LayoutTransform>
+
+                            <Border x:Name="BackgroundNorm"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}">
+                            </Border>
+                            <Border x:Name="BackgroundOver"
+                                    Background="{DynamicResource CancelButtonBackgroundHoverBrush}"
+                                    BorderBrush="{DynamicResource CancelButtonBorderHoverBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+                            <Border x:Name="BackgroundPressed"
+                                    Background="{DynamicResource CancelButtonBackgroundPressedBrush}"
+                                    BorderBrush="{DynamicResource CancelButtonBorderPressedBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+
+                            <Border x:Name="DisabledVisualElement"
+                                    Background="#FFF1F1F1"
+                                    BorderBrush="#FFB2B2B2"                                    
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Visibility="Collapsed" />
+                            <ContentPresenter   x:Name="contentPresenter"
+                                                Content="{TemplateBinding Content}"
+                                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                Margin="{TemplateBinding Padding}" />
+                            <TextBlock  Panel.ZIndex="1"
+                                        x:Name="DisabledOverlay"
+                                        Text="{TemplateBinding Content}"
+                                        Foreground="Black"                                        
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}"
+                                        Visibility="Collapsed" />
+                            <!-- not currently used -->
+                            <Border x:Name="FocusVisualElement"
+                                    Margin="1"
+                                    BorderBrush="DarkGreen"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                            <!-- not currently used -->
+                            <Border x:Name="DefaultBorder"
+                                    Margin="1"
+                                    BorderBrush="DarkRed"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                        </Grid>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefault"
+                                 Value="True">
+                            <Setter Property="Opacity"
+                                    TargetName="DefaultBorder"
+                                    Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOff}"
+                                                 x:Name="HoverOff_BeginStoryboard" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOn}" />
+                            </Trigger.EnterActions>
+
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOff}" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOn}" />
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="true" />
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource DisabledForegroundBrush}" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledVisualElement"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledOverlay"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="contentPresenter"
+                                    Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- this is the style used by grid of item modifier -->
+    <Style x:Key="GirdItemModifierStyle"  TargetType="Grid">
+        <Setter Property="Background"
+                Value="{DynamicResource ButtonTextBrush}" />
+        <Setter Property="Margin"
+                Value="0" />
+    </Style>
+
+    <Style x:Key="GirdItemVarietyStyle"  TargetType="Grid">
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Margin"
+                Value="0" />
+
+    </Style>
+
+    <Style  x:Key="ItemVarietyListBoxStyle"
+            TargetType="ListBox">
+        <Setter Property="BorderBrush"
+                Value="Transparent" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Margin"
+                Value="0" />
+
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"
+                               VerticalAlignment="Center"  
+                               HorizontalAlignment="Left"
+                                />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ItemVarietyListItemStyle"
+           TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Grid>
+                        <Border x:Name="Bd"
+                                Background="Transparent"
+                                SnapsToDevicePixels="true"
+                                CornerRadius="3">
+                            <Grid Margin="1">
+                                <ContentPresenter   HorizontalAlignment="Center"
+                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                      />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected"
+                                 Value="true">
+                            <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="{StaticResource VarietySeledtedColorBrush }" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style  x:Key="ItemModSetListBoxStyle"
+            TargetType="ListBox">
+        <Setter Property="BorderBrush"
+                Value="Transparent" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ItemModSetListItemStyle"
+           TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Grid>
+                        <Grid>
+                            <Border x:Name="Bd"
+                                Background="Transparent"
+                                SnapsToDevicePixels="true"
+                                CornerRadius="3">
+                                <Grid Margin="5" ShowGridLines="True">
+                                    <ContentPresenter   HorizontalAlignment="Left"
+                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                     />
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected"
+                                 Value="true">
+                            <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="Transparent" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="CartItemListItemStyle"
+           TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Grid>
+                        <Grid>
+                            <Border x:Name="Bd"
+                                Background="Transparent"
+                                SnapsToDevicePixels="true"
+                                CornerRadius="3">
+                                <Grid Margin="5" ShowGridLines="True">
+                                    <ContentPresenter   HorizontalAlignment="Left"
+                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                     />
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected"
+                                 Value="true">
+                            <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="Transparent" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+
+    <!--
+    
+
+    -->
+
+    <!-- this is the template for how each main item is to be displayed on the listbox -->
+    <DataTemplate x:Key="ItemVarietyDataTemplate">
+        <Grid HorizontalAlignment="Stretch" MinHeight="80" MinWidth="100" 
+              VerticalAlignment="Stretch"  Margin="2"   >
+            <Border Background="#FFE06200"                    
+                    BorderThickness="1"
+                    CornerRadius="3"/>
+            <Grid Margin="1"   >
+                <Rectangle VerticalAlignment="Stretch"  HorizontalAlignment="Stretch" Margin="0" >
+                    <Rectangle.Fill >
+                        <LinearGradientBrush  StartPoint="0.5,0"
+                         EndPoint="0.5,1">
+                            <GradientStop Color="#FFE06216"
+                      Offset="0.0" />
+                            <GradientStop Color="#FFffca18"
+                      Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock  Width="Auto" Margin="10,5,10,5"
+                            Text="{Binding Caption}"
+                            VerticalAlignment="Center"
+                            TextAlignment="Center"                            
+                            Style="{DynamicResource ItemVarietyTextBlockStyle}" />
+            </Grid>
+        </Grid>
+    </DataTemplate>
+
+    <Style x:Key="ItemIncrementButtonStyle"
+           TargetType="Button">
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="Background"
+                Value="{DynamicResource GoButtonBackgroundBrush}" />
+        <Setter Property="FontSize"
+                Value="30" />
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="BorderBrush"
+                Value="#FFf29819" />
+        <Setter Property="BorderThickness"
+                Value="{DynamicResource ButtonBorderThickness}" />
+        <Setter Property="Padding"
+                Value="{DynamicResource ButtonPadding}" />
+
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="HoverOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" />
+                        </Storyboard>
+                        <Storyboard x:Key="HoverOff">
+                            <DoubleAnimation    Duration="00:00:00.4000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0" />
+
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="0.84" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="0.84" />
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOff">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="1" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="1" />
+                        </Storyboard>
+
+                    </ControlTemplate.Resources>
+                    <Grid x:Name="Grid">
+                        <Grid x:Name="ContentGrid">
+                            <Grid.LayoutTransform>
+                                <ScaleTransform x:Name="BackgroundScale"
+                                                CenterX="0.5"
+                                                CenterY="0.5"
+                                                ScaleX="1"
+                                                ScaleY="1" />
+                            </Grid.LayoutTransform>
+
+                            <Border x:Name="BackgroundNorm"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}">
+                            </Border>
+                            <Border x:Name="BackgroundOver"
+                                    Background="#33000000"
+                                    BorderBrush="#33000000"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+                            <Border x:Name="BackgroundPressed"
+                                    Background="#33000000"
+                                    BorderBrush="#33000000"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+
+                            <Border x:Name="DisabledVisualElement"
+                                    Background="#FFF1F1F1"
+                                    BorderBrush="#FFB2B2B2"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Visibility="Collapsed" />
+                            <ContentPresenter   x:Name="contentPresenter"
+                                                Content="{TemplateBinding Content}"
+                                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                Margin="{TemplateBinding Padding}" />
+                            <TextBlock  Panel.ZIndex="1"
+                                        x:Name="DisabledOverlay"
+                                        Text="{TemplateBinding Content}"
+                                        Foreground="#FF969696"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}"
+                                        Visibility="Collapsed" />
+                            <!-- not currently used -->
+                            <Border x:Name="FocusVisualElement"
+                                    Margin="1"
+                                    BorderBrush="DarkGreen"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                            <!-- not currently used -->
+                            <Border x:Name="DefaultBorder"
+                                    Margin="1"
+                                    BorderBrush="DarkRed"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                        </Grid>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefault"
+                                 Value="True">
+                            <Setter Property="Opacity"
+                                    TargetName="DefaultBorder"
+                                    Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOff}"
+                                                 x:Name="HoverOff_BeginStoryboard" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOn}" />
+                            </Trigger.EnterActions>
+
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOff}" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOn}" />
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="true" />
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource DisabledForegroundBrush}" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledVisualElement"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledOverlay"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="contentPresenter"
+                                    Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="CartItemIncrementButtonStyle"
+           TargetType="Button">
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="Background"
+                Value="{DynamicResource GoButtonBackgroundBrush}" />
+        <Setter Property="FontSize"
+                Value="24" />
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="BorderBrush"
+                Value="#FFf29819" />
+        <Setter Property="BorderThickness"
+                Value="{DynamicResource ButtonBorderThickness}" />
+
+
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="HoverOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" />
+                        </Storyboard>
+                        <Storyboard x:Key="HoverOff">
+                            <DoubleAnimation    Duration="00:00:00.4000000"
+                                                Storyboard.TargetName="BackgroundOver"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0" />
+
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOn">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="0.84" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="0.84" />
+                        </Storyboard>
+                        <Storyboard x:Key="PressedOff">
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleX"
+                                                To="1" />
+                            <DoubleAnimation    Duration="00:00:00.1000000"
+                                                Storyboard.TargetName="BackgroundScale"
+                                                Storyboard.TargetProperty="ScaleY"
+                                                To="1" />
+                        </Storyboard>
+
+                    </ControlTemplate.Resources>
+                    <Grid x:Name="Grid">
+                        <Grid x:Name="ContentGrid">
+                            <Grid.LayoutTransform>
+                                <ScaleTransform x:Name="BackgroundScale"
+                                                CenterX="0.5"
+                                                CenterY="0.5"
+                                                ScaleX="1"
+                                                ScaleY="1" />
+                            </Grid.LayoutTransform>
+
+                            <Border x:Name="BackgroundNorm"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}">
+                            </Border>
+                            <Border x:Name="BackgroundOver"
+                                    Background="#33000000"
+                                    BorderBrush="#33000000"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+                            <Border x:Name="BackgroundPressed"
+                                    Background="#33000000"
+                                    BorderBrush="#33000000"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    Opacity="0" />
+
+                            <Border x:Name="DisabledVisualElement"
+                                    Background="#FFF1F1F1"
+                                    BorderBrush="#FFB2B2B2"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Visibility="Collapsed" />
+                            <ContentPresenter   x:Name="contentPresenter"
+                                                Content="{TemplateBinding Content}"
+                                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                Margin="{TemplateBinding Padding}" />
+                            <TextBlock  Panel.ZIndex="1"
+                                        x:Name="DisabledOverlay"
+                                        Text="{TemplateBinding Content}"
+                                        Foreground="#FF969696"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}"
+                                        Visibility="Collapsed" />
+                            <!-- not currently used -->
+                            <Border x:Name="FocusVisualElement"
+                                    Margin="1"
+                                    BorderBrush="DarkGreen"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                            <!-- not currently used -->
+                            <Border x:Name="DefaultBorder"
+                                    Margin="1"
+                                    BorderBrush="DarkRed"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{DynamicResource ButtonCornerRadius}"
+                                    IsHitTestVisible="false"
+                                    Opacity="0" />
+                        </Grid>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefault"
+                                 Value="True">
+                            <Setter Property="Opacity"
+                                    TargetName="DefaultBorder"
+                                    Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOff}"
+                                                 x:Name="HoverOff_BeginStoryboard" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource HoverOn}" />
+                            </Trigger.EnterActions>
+
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOff}" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource PressedOn}" />
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="true" />
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource DisabledForegroundBrush}" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledVisualElement"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="DisabledOverlay"
+                                    Value="Visible" />
+                            <Setter Property="Visibility"
+                                    TargetName="contentPresenter"
+                                    Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  x:Key="ItemQtyTextBlockStyle"
+            TargetType="TextBlock" >
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground"
+                Value="#FFE06216" />
+        <Setter Property="FontSize"
+                Value="30" />
+
+        <Setter Property="Width" Value="130" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+
+    <Style  x:Key="ItemVarietyTextBlockStyle"
+            TargetType="TextBlock" >
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="FontSize"
+                Value="22" />
+
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+
+    <Style  x:Key="ItemVarietyButtonStyle"
+            TargetType="Button" BasedOn="{StaticResource VarietyButtonStyle}">
+
+        <Setter Property="MinWidth"
+                Value="140" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalAlignment"
+                Value="Center" />
+        <Setter Property="FontSize"
+                Value="30" />
+        <Setter Property="Margin"
+                Value="10" />
+    </Style>
+
+
+    <Style  x:Key="ToppingButtonStyle"
+            TargetType="Button" BasedOn="{StaticResource QtyButtonStyle}">
+
+        <Setter Property="Width"
+                Value="100" />
+        <Setter Property="Height" Value="90" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalAlignment"
+                Value="Center" />
+        <Setter Property="FontSize"
+                Value="22" />
+        <Setter Property="Margin"
+                Value="5" />
+    </Style>
+
+    <!-- 
+                    <Button  Grid.Row="0"
+                         Content="{Binding Caption}"                               
+                         Style="{DynamicResource ItemVarietyButtonStyle}"  
+                         Command="{Binding DataContext.ClickItemVarietyCmd, RelativeSource={RelativeSource AncestorType=ListBox}}"
+                         CommandParameter="{Binding }"
+                        />
+    
+    -->
+    <Style  x:Key="CartTextGridStyle" TargetType="Grid" >
+        <Setter Property="Background" Value="White" />
+    </Style>
+
+    <Style  x:Key="CartTextBlockStyle"
+            TargetType="TextBlock" >
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="FontSize"
+                Value="{DynamicResource DefaultFontSize}" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="Bold" />
+
+    </Style>
+
+    <Style x:Key="CartTextBorderStyle" TargetType="Border">
+        <Setter Property="Margin" 
+                Value="10"/>
+        <Setter Property="Background"
+                Value="{DynamicResource SectionBackgroundBrush}" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource SectionBorderBrush}" />
+        <Setter Property="BorderThickness"
+                Value="{DynamicResource SectionBorderThickness}" />
+        <Setter Property="CornerRadius"
+                Value="{DynamicResource SectionBorderCornerRadius}" />
+    </Style>
+
+    <Style x:Key="ChangeButtonStyle"
+           TargetType="Button" BasedOn="{StaticResource GoButtonStyle}">
+        <Setter Property="FontSize"
+                Value="24" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Margin" 
+                Value="10"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+
+    </Style>
+    <Style  x:Key="CartGridStyle"
+            TargetType="Grid" >
+        <Setter Property="Background" Value="White" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+    </Style>
+
+    <!-- this is the header text that appears on an item card -->
+    <Style  x:Key="CartHeaderTextBlockStyle"
+            TargetType="TextBlock"
+             >
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="FontSize"
+                Value="20" />
+    </Style>
+
+    <Style  x:Key="DelTxnHeaderTextBlockStyle"
+            TargetType="TextBlock" >
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="Background" Value="Red" />
+        <Setter Property="FontSize"
+                Value="20" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+
+    <Style  x:Key="FinalMessageTextBlockStyle"
+            TargetType="TextBlock"
+             >
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="FontSize"
+                Value="40" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="TextAlignment"
+                Value="Center" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+    </Style>
+    
+    <Style  x:Key="PaymentHeaderTextBlockStyle"
+            TargetType="TextBlock"
+             >
+        <Setter Property="Foreground"
+                Value="White" />
+        <Setter Property="FontSize"
+                Value="32" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="TextAlignment"
+                Value="Center" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+    </Style>
+
+    <Style x:Key="ListBoxStyle"
+           TargetType="ListBox">
+        <Setter Property="Background"
+                Value="Transparent"/>
+        <Setter Property="BorderBrush"
+                Value="Transparent"/>
+        <Setter Property="Margin"
+                Value="0,0,0,0"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility"
+                Value="Disabled"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility"
+                Value="Hidden"/>
+        <Setter Property="ScrollViewer.CanContentScroll"
+                Value="False"/>
+        <Setter Property="ScrollViewer.PanningMode"
+                Value="VerticalOnly"/>
+        <Setter Property="VerticalAlignment"
+                Value="Stretch"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    </Style>
+
+    <Style x:Key="CartItemsListBoxStyle"
+           TargetType="ListBox">
+        <Setter Property="Background"
+                Value="Transparent"/>
+        <Setter Property="BorderBrush"
+                Value="Transparent"/>
+        <Setter Property="Margin"
+                Value="0,0,0,0"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility"
+                Value="Disabled"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility"
+                Value="Hidden"/>
+        <Setter Property="ScrollViewer.CanContentScroll"
+                Value="False"/>
+        <Setter Property="ScrollViewer.PanningMode"
+                Value="VerticalOnly"/>
+        <Setter Property="VerticalAlignment"
+                Value="Stretch"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    </Style>
+
+    
+
+
+    <DataTemplate x:Key="TranscationItemModifierListDataTemplate">
+        <Grid   Background="Transparent" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="580"></ColumnDefinition>
+                <ColumnDefinition Width="72"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="{Binding Caption}"  Grid.Column="0"
+                               HorizontalAlignment="Stretch"
+                               VerticalAlignment="Center"
+                               TextWrapping="Wrap"
+                               TextAlignment="Left"                               
+                               Padding="5,0,0,0"
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}"
+                              />
+            <TextBlock Text="{Binding Qty, StringFormat='X \{0:0}'}" Grid.Column="1"  
+                                   FontWeight="Bold"
+                                   TextAlignment="Center"
+                                   VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"                                   
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}" />
+            <TextBlock Text="{Binding Amount, StringFormat='\{0:$0.00;$0.00; }'}" Grid.Column="2" 
+                                   FontWeight="Bold"
+                                   TextAlignment="Right"
+                                   VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"                                   
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}" />
+          <!--  <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseLeftButtonDown">
+                    <i:InvokeCommandAction Command="{Binding DataContext.TranscationListBox_ItemClicked,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBox} ,AncestorLevel=3}}" 
+                                           CommandParameter="{Binding  RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBoxItem},AncestorLevel=3},Path=Content}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>-->
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TranscationItemListDataTemplate">
+        <Grid  Margin="0" HorizontalAlignment="Stretch"   >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Margin="0"  HorizontalAlignment="Stretch" Grid.Row="0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="580"></ColumnDefinition>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="{Binding Item_Name}"  Grid.Column="0" Grid.Row="0"
+                               HorizontalAlignment="Stretch"
+                               VerticalAlignment="Center"
+                               TextWrapping="Wrap"
+                               TextAlignment="Left"                  
+                                   FontWeight="Bold"
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="{Binding Qty, StringFormat='X \{0:0}'}" Grid.Column="1"  Grid.Row="0"
+                                   FontWeight="Bold"
+                                   TextAlignment="Center"
+                                   VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"                                   
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="{Binding Sprice, StringFormat='\{0:$0.00;$0.00; }'}" Grid.Column="2"  Grid.Row="0"
+                                   FontWeight="Bold"
+                                   TextAlignment="Right"
+                                   VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"                                   
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="{Binding Variety_Caption}"  Grid.Column="0" Grid.Row="1"
+                               HorizontalAlignment="Stretch"
+                               VerticalAlignment="Center"
+                               TextWrapping="Wrap"
+                               TextAlignment="Left"                  
+                                   FontWeight="Bold"
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <!--<i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding DataContext.TranscationListBox_ItemClicked,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBox} ,AncestorLevel=2}}" 
+                                               CommandParameter="{Binding  RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBoxItem},AncestorLevel=2},Path=Content}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>-->
+            </Grid>
+            <Grid  HorizontalAlignment="Stretch" Grid.Row="1">
+                <ListBox x:Name="ModifierListBox"  Background="Transparent" BorderThickness="0"   
+                         ItemsSource="{Binding Modifiers}"
+                         ItemTemplate="{StaticResource TranscationItemModifierListDataTemplate}" 
+                         ItemContainerStyle="{StaticResource CartItemListItemStyle}"
+                         Style="{StaticResource ListBoxStyle}" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Vertical"  HorizontalAlignment="Stretch"  />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+
+            </Grid>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TranscationListDataTemplate">
+        <Border BorderBrush="Black" BorderThickness="1">
+            <Grid Margin="1"  HorizontalAlignment="Stretch"  Background="{Binding ItemSelected, Converter={StaticResource SelectedColorConvert}}"   Width="790"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="0.3*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Date:"  Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Stretch"    VerticalAlignment="Stretch"
+                                 TextAlignment="Left" FontWeight="Bold"
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="{Binding AccDate}"      Grid.Column="1" Grid.Row="0"   HorizontalAlignment="Stretch"    VerticalAlignment="Stretch"
+                               TextAlignment="Center"  FontWeight="Bold"
+                               Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="#" Grid.Column="2" Grid.Row="0"   HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"            
+                                   FontWeight="Bold"  TextAlignment="Right" 
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="{Binding Deal_No}"  Grid.Column="3"  Grid.Row="0"   HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"   
+                               TextAlignment="Left"  FontWeight="Bold"
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="Time:"    Grid.Column="4"  Grid.Row="0"   HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"   
+                           TextAlignment="Left"   FontWeight="Bold"
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="{Binding Tdate}"   Grid.Column="5"  Grid.Row="0"   HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" 
+                               TextAlignment="Left"  FontWeight="Bold"
+                               Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="Refund:"    Grid.Column="6"  Grid.Row="0"   HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"   
+                           TextAlignment="Left"   FontWeight="Bold"
+                                 Style="{DynamicResource DelTxnHeaderTextBlockStyle}" />
+                <TextBlock Text="{Binding Del_deal_no}"   Grid.Column="7"  Grid.Row="0"                               
+                               Style="{DynamicResource DelTxnHeaderTextBlockStyle}" />
+
+                <TextBlock  Text="{Binding ItemSelected, Mode=OneWay}" Grid.Column="7"  Grid.Row="0"    HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" 
+                            TextAlignment="Left"  FontWeight="Bold"  Visibility="Hidden"
+                               Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <Grid   Grid.Column="0" Grid.ColumnSpan="8" Grid.Row="1"   HorizontalAlignment="Stretch">
+
+                    <ListBox x:Name="ItemsListBox"  Background="Transparent" BorderThickness="0"   
+                         ItemsSource="{Binding OrderItems}"
+                         ItemTemplate="{StaticResource TranscationItemListDataTemplate}" 
+                         ItemContainerStyle="{StaticResource CartItemListItemStyle}"
+                         Style="{StaticResource ListBoxStyle}" >
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical"  HorizontalAlignment="Stretch"  />
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                    </ListBox>
+                </Grid>
+                <!-- <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding DataContext.TranscationListBox_ItemClicked,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBox} ,AncestorLevel=1}}" CommandParameter="{Binding}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>-->
+            </Grid>
+
+        </Border>
+    </DataTemplate>
+
+
+    <DataTemplate x:Key="TranscationListSeledtedDataTemplate">
+        <Border BorderBrush="Black" BorderThickness="1">
+            <Grid Margin="1"  HorizontalAlignment="Stretch"  Background="Orange"   Width="790"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Date:"       Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Stretch"    VerticalAlignment="Stretch"
+                                 TextAlignment="Left" FontWeight="Bold"
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="{Binding AccDate}"      Grid.Column="1" Grid.Row="0"   HorizontalAlignment="Stretch"    VerticalAlignment="Stretch"
+                               TextAlignment="Center"  FontWeight="Bold"
+                               Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="#" Grid.Column="2" Grid.Row="0"   HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"            
+                                   FontWeight="Bold"  TextAlignment="Right" 
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="{Binding Deal_No}"  Grid.Column="3"  Grid.Row="0"   HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"   
+                               TextAlignment="Left"  FontWeight="Bold"
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="Time:"    Grid.Column="4"  Grid.Row="0"   HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"   
+                           TextAlignment="Left"   FontWeight="Bold"
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                <TextBlock Text="{Binding Tdate}"   Grid.Column="5"  Grid.Row="0"   HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"                                                            
+                               TextAlignment="Left"  FontWeight="Bold"
+                               Style="{DynamicResource CartHeaderTextBlockStyle}" />
+
+                <Grid   Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="1"   HorizontalAlignment="Stretch">
+
+                    <ListBox x:Name="ItemsListBox"  Background="Transparent" BorderThickness="0"   
+                         ItemsSource="{Binding OrderItems}"
+                         ItemTemplate="{StaticResource TranscationItemListDataTemplate}" 
+                         ItemContainerStyle="{StaticResource CartItemListItemStyle}"
+                         Style="{StaticResource ListBoxStyle}" >
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical"  HorizontalAlignment="Stretch"  />
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                    </ListBox>
+                </Grid>
+                <!--<i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding DataContext.TranscationListBox_ItemClicked,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBox} ,AncestorLevel=1}}" CommandParameter="{Binding}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>-->
+            </Grid>
+
+        </Border>
+    </DataTemplate>
+
+    <Style x:Key="TxnListItemContainerStyle"
+           TargetType="{x:Type ListBoxItem}">
+        <Setter Property="ContentTemplate" Value="{StaticResource TranscationListDataTemplate}" />
+
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Grid>
+                        <Grid>
+                            <Border x:Name="Bd"
+                                Background="Transparent"
+                                SnapsToDevicePixels="true"
+                                CornerRadius="3">
+                                <Grid Margin="5" ShowGridLines="True">
+                                    <ContentPresenter   HorizontalAlignment="Left"
+                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                       />
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- 
+     <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Grid>
+                        <Grid>
+                            <Border x:Name="Bd"
+                                Background="Transparent"
+                                SnapsToDevicePixels="true"
+                                CornerRadius="3">
+                                <Grid Margin="5" ShowGridLines="True">
+                                    <ContentPresenter   HorizontalAlignment="Left"
+                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                     />
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected"
+                                 Value="true">
+                            <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    -->
+
+
+    <DataTemplate x:Key="CartItemsModifierListBoxTemplate">
+        <Grid   Background="Transparent" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="530"></ColumnDefinition>
+                <ColumnDefinition Width="80"></ColumnDefinition>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="{Binding Caption}"  Grid.Column="0"
+                               HorizontalAlignment="Stretch"
+                               VerticalAlignment="Center"
+                               TextWrapping="Wrap"
+                               TextAlignment="Left"                               
+                               Padding="15,0,0,0"
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}"
+                              />
+            <TextBlock Text="{Binding CalQty, StringFormat='X \{0:0}',UpdateSourceTrigger=PropertyChanged }" Grid.Column="1"  
+                                   FontWeight="Bold"
+                                   TextAlignment="Center"
+                                   VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"                                   
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}" />
+            <TextBlock Text="{Binding CalSprice, StringFormat='\{0:$0.00;$0.00; }'}" Grid.Column="2" 
+                                   FontWeight="Bold"
+                                   TextAlignment="Right"
+                                   VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"                                   
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}" />
+            <!-- <TextBlock Text="{Binding Amount, StringFormat='\{0:$0.00;$0.00; }'}" Grid.Column="3" 
+                                   FontWeight="Bold"
+                                   TextAlignment="Right"
+                                   VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"                                   
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}" />
+   -->
+        </Grid>
+    </DataTemplate>
+    
+    <DataTemplate x:Key="CartItemDataTemplate">
+        <Grid  Margin="0" HorizontalAlignment="Stretch"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="54"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="240"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border Style="{StaticResource SectionBorderStyle}"/>
+            <!-- Item Image-->
+            <Grid Margin="2"  Grid.Column="0"  Grid.Row="0"  VerticalAlignment="Stretch"  HorizontalAlignment="Stretch"     >
+
+                <Image  VerticalAlignment="Top"  Stretch="UniformToFill"                        
+                        Source="{Binding ItemPicture,Converter={StaticResource BitmapImageConverter}}" />
+            </Grid>
+            <!-- Item Caption & modifier -->
+            <StackPanel Margin="2"  Grid.Column="1"  Grid.Row="0"  Background="Transparent" >
+                <Grid Margin="5"  HorizontalAlignment="Stretch" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="530"></ColumnDefinition>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="90"></ColumnDefinition>
+                        <ColumnDefinition Width="90"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{Binding Item_Name}"  Grid.Column="0" Grid.Row="0"
+                               HorizontalAlignment="Stretch"
+                               VerticalAlignment="Center"
+                               TextWrapping="Wrap"
+                               TextAlignment="Left"                  
+                                   FontWeight="Bold"
+                                 Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                    <TextBlock Text="{Binding Qty, StringFormat='X \{0:0}'}" Grid.Column="1"  Grid.Row="0"
+                                   FontWeight="Bold"
+                                   TextAlignment="Center"
+                                   VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"                                   
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                    <TextBlock Text="{Binding Goo_Price, StringFormat='\{0:$0.00;$0.00; }'}" Grid.Column="2"  Grid.Row="0"
+                                   FontWeight="Bold"
+                                   TextAlignment="Right"
+                                   VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"                                   
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                    <TextBlock Text="{Binding Amount, StringFormat='\{0:$0.00;$0.00; }'}" Grid.Column="3"  Grid.Row="0"
+                                   FontWeight="Bold"
+                                   TextAlignment="Right"
+                                   VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"                                   
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                    <TextBlock Text="{Binding Variety_Caption}"  Grid.Column="0" Grid.Row="1"
+                               HorizontalAlignment="Stretch"
+                               VerticalAlignment="Center"
+                               TextWrapping="Wrap"
+                               TextAlignment="Left"                  
+                               FontWeight="Bold"
+                               Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                </Grid>
+                <!-- item modifier -->
+                <ListBox x:Name="ItemsModifierListBox"  Background="Transparent" BorderThickness="0"
+                         ItemsSource="{Binding Modifiers,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                         ItemTemplate="{StaticResource CartItemsModifierListBoxTemplate}" 
+                         ItemContainerStyle="{StaticResource CartItemListItemStyle}"
+                         ScrollViewer.PanningMode="None" 
+                         ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                         ScrollViewer.HorizontalScrollBarVisibility="Hidden" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Vertical"  HorizontalAlignment="Stretch"  />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+                <!-- item total -->
+                <StackPanel Orientation="Vertical">
+                    <Border BorderThickness="1" Background="#ff669281" BorderBrush="Gray" HorizontalAlignment="Stretch" >
+                    </Border>
+                    <Grid Margin="5" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="590"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Grid.ColumnSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="160"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Quantity" Grid.Column="1"
+                                   FontWeight="Bold"
+                                   TextAlignment="Left"
+                                   VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"                                   
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                            <Button  Style="{StaticResource CartItemIncrementButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2"    x:Name="QtyMinus" Height="40"
+                                     Command="{Binding RelativeSource ={RelativeSource FindAncestor, AncestorType={x:Type ListBox},AncestorLevel=1} , Path=DataContext.MinusClick }" 
+                                     CommandParameter="{Binding}">
+                                <Button.Content>
+                                    <TextBlock  Text="-" FontSize="28"/>
+                                </Button.Content>
+                            </Button>
+                            <TextBlock Text="{Binding Qty}" Grid.Column="3"
+                                   FontWeight="Bold"    TextAlignment="Center"  VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"      Foreground="Blue"                             
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}"  />
+                            <Button Style="{StaticResource CartItemIncrementButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="4" x:Name="QtyPlus" Height="40"
+                                    Command="{Binding RelativeSource ={RelativeSource FindAncestor, AncestorType={x:Type ListBox},AncestorLevel=1} , Path=DataContext.PlusClick }" 
+                                    CommandParameter="{Binding}"
+                                    >
+                                <Button.Content>
+                                    <TextBlock Text="+" FontSize="28"/>
+                                </Button.Content>
+                            </Button>
+                        </Grid>
+                        <TextBlock Text="{Binding Amount, StringFormat='\{0:$0.00;$0.00; }'}" Grid.Column="2"
+                                   FontWeight="Bold"
+                                   TextAlignment="Right"
+                                   VerticalAlignment="Center"        
+                                   HorizontalAlignment="Stretch"                                   
+                                   Style="{DynamicResource CartHeaderTextBlockStyle}" />
+                    </Grid>
+
+                </StackPanel>
+            </StackPanel>
+            <Grid Margin="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"></ColumnDefinition>
+                    <ColumnDefinition Width="180"></ColumnDefinition>
+                    <ColumnDefinition Width="450"></ColumnDefinition>
+                    <ColumnDefinition Width="180"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button   x:Name="btnRemnove" Style="{StaticResource CancelButtonStyle}"   Grid.Column="1" 
+                          Background="#e3e3e3" BorderBrush="#e3e3e3"
+                          Command="{Binding RelativeSource ={RelativeSource FindAncestor, AncestorType={x:Type ListBox},AncestorLevel=1} , Path=DataContext.RemoveItemClick}" 
+                          CommandParameter="{Binding}">
+                    <Button.Content>
+                        <TextBlock  Text="REMOVE" FontSize="24"/>
+                    </Button.Content>
+                </Button>
+                <Button   x:Name="btnModify" Style="{StaticResource ItemGoButtonStyle}"   Grid.Column="3"                            
+                          Command="{Binding RelativeSource ={RelativeSource FindAncestor, AncestorType={x:Type ListBox},AncestorLevel=1} , Path=DataContext.ModifyItemClick}" 
+                          CommandParameter="{Binding}">
+                    <Button.Content>
+                        <TextBlock  Text="MODIFY" FontSize="24"/>
+                    </Button.Content>
+                </Button>
+            </Grid>
+        </Grid>
+    </DataTemplate>
+
+</ResourceDictionary>

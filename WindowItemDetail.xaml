@@ -1,0 +1,134 @@
+﻿<Window x:Class="SNSelfOrder.WindowItemDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"           
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"      
+        
+        xmlns:local="clr-namespace:SNSelfOrder"
+        mc:Ignorable="d" Left="0" Top="0"
+        WindowStyle="None"
+        WindowStartupLocation="Manual"
+        ShowInTaskbar="False" 
+        AllowsTransparency="True"
+        Title="WindowItemDetail" Height="1080" Width="1080">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0" />
+    </WindowChrome.WindowChrome>
+    <Window.Background>
+        <SolidColorBrush  Color="#60efefef" />
+    </Window.Background>
+
+    <Grid Style="{StaticResource LayoutItemRootGridStyle}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="7*" />
+            <RowDefinition Height="{StaticResource BottomHeight}" />
+        </Grid.RowDefinitions>
+        <Image x:Name="mBackroundImage"
+               Grid.RowSpan="3" HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+                Stretch="Fill"
+               Source="{Binding BackgroundImagePath}"
+               Margin="0">
+        </Image>
+        <Grid Grid.Row="0"  Style="{StaticResource GirdItemDescStyle}" ShowGridLines="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="7*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <!-- -->
+            <Rectangle Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource ItemImagStyle}"   >
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="{Binding ItemImagePath}" Stretch="UniformToFill"  />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Grid Grid.Row="0" Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="ItemCaption"  Grid.Column="0"   Text="{Binding ItemName}"   Style="{StaticResource ItemNameStyle}" />
+                <TextBlock x:Name="ItemAmount"   Grid.Column="1"  Text="{Binding ItemAmount, StringFormat=C2 }"   Style="{StaticResource ItemPriceStyle}" />
+            </Grid>
+            <TextBlock x:Name="ItemDescription" Grid.Row="1" Grid.Column="1" Text="{Binding ItemDescription}" Style="{StaticResource ItemDescriptionStyle}"  />
+        </Grid>
+        <Grid Grid.Row="1"  x:Name="GridItemModifer" Style="{StaticResource GirdItemModifierStyle}" ShowGridLines="False">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" x:Name="ItemVarietyGrid"  Style="{StaticResource GirdItemVarietyStyle}"    >
+                <ListBox x:Name="ItemVarietyListBox"                     
+                     ItemsSource="{Binding ItemVarietys,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource ItemVarietyListBoxStyle}"
+                     ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                     ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                     ScrollViewer.CanContentScroll="False"
+                     ScrollViewer.PanningMode="HorizontalOnly"
+                     ItemContainerStyle="{StaticResource ItemVarietyListItemStyle}"
+                     ItemTemplate="{StaticResource ItemVarietyDataTemplate}" >
+                    <!--<i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding VarietySelectChanged}"  CommandParameter="{Binding ElementName=ItemVarietyListBox, Path=SelectedItem}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>-->
+                </ListBox>
+            </Grid>
+            <!-- this is Modifiers Grid  for item of selected-->
+            <Grid Grid.Row="1" x:Name="ItemModSetGrid"    Margin="0">
+                <ListBox x:Name="ModSetListBox"    
+                         ItemsSource="{Binding SelectedVariety.ModifierSets,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"                                                      
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                         ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                         ScrollViewer.CanContentScroll="False"
+                         ScrollViewer.PanningMode="VerticalOnly"                         
+                         ItemContainerStyle="{StaticResource ItemModSetListItemStyle}" >
+                    <ListBox.ItemTemplate >
+                        <DataTemplate>
+                            <!-- <Border BorderBrush="Green"  BorderThickness="1" CornerRadius="2" HorizontalAlignment="Stretch" Height="Auto"  Width="1000">-->
+                            <StackPanel  MaxWidth="1000" Width="1000" x:Name="myStackPanel" 
+                                        VerticalAlignment="Stretch"
+                                        HorizontalAlignment="Left"  >
+                   
+                                    <Grid  Grid.Row="0" Background="#FFE06216"    >
+                                        <TextBlock     Text="{Binding Path=Caption }" 
+                                                       Style="{StaticResource ModSetCaptionStyle }" />
+                                    </Grid>
+                                    <Grid Grid.Row="1">
+                                    <ListBox  
+                                        x:Name="ModifierListBox"   
+                                        ItemsSource="{Binding Path=Modifiers}" 
+                                        ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                        ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                                        ScrollViewer.CanContentScroll="False"
+                                        ScrollViewer.PanningMode="None"     
+                                        ItemTemplate="{StaticResource ModifierTemplate}" >
+                                        <ListBox.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <WrapPanel  
+                                                                HorizontalAlignment="Left" />
+                                            </ItemsPanelTemplate>
+                                        </ListBox.ItemsPanel>
+                                    </ListBox>
+                                </Grid>
+                                
+                            </StackPanel>
+                            <!--</Border> -->
+
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+            </Grid>
+
+
+        </Grid>
+
+    </Grid>
+</Window>

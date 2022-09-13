@@ -1,0 +1,13 @@
+[Header]2022-05-23 13:58:49,658 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-05-23 13:58:49,671 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\PRSelfOrder_GIOV2\PRSelfOrder\PRSelfOrder
+2022-05-23 13:58:49,671 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\PRSelfOrder_GIOV2\PRSelfOrder\PRSelfOrder
+2022-05-23 13:58:49,671 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\PRSelfOrder_GIOV2\PRSelfOrder\PRSelfOrder
+2022-05-23 13:58:49,672 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-05-23 13:58:49,673 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\PRSelfOrder_GIOV2\PRSelfOrder\PRSelfOrder
+2022-05-23 13:58:49,673 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\PRSelfOrder_GIOV2\PRSelfOrder\PRSelfOrder\db\prposdb.db3
+2022-05-23 13:58:50,419 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-05-23 13:58:50,420 [ 1] INFO  SNSelfOrder.App: dd/MM/yyyy
+2022-05-23 13:58:50,420 [ 1] INFO  SNSelfOrder.App: HH:mm:ss
+2022-05-23 13:58:51,573 [ 1] INFO  SNSelfOrder.App:  CheckCCode    
+2022-05-23 13:58:51,774 [ 1] INFO  SNSelfOrder.App:  CheckConnectionCodeService Start   
+2022-05-23 13:58:51,774 [ 1] INFO  SNSelfOrder.App:  CheckCCode ret=SNSelfOrder.Models.Station

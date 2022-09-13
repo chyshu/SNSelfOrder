@@ -1,0 +1,1432 @@
+[Header]2022-06-14 00:01:04,358 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 00:01:04,371 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:01:04,372 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:01:04,372 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:01:04,373 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 00:01:04,373 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:01:04,375 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 00:01:04,926 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 00:01:04,926 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 00:01:04,926 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 00:01:04,926 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 00:01:04,926 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 00:01:04,926 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 00:01:04,926 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 00:01:06,085 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 00:01:06,510 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"9934413fc2534d57a84f8da433d26f99","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 00:01:06,563 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 00:01:06,636 [ 6] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 00:01:12,586 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 00:01:12,589 [ 1] INFO  SNSelfOrder.App:  PageImage:10100
+2022-06-14 00:01:12,593 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 00:01:12,687 [ 1] INFO  SNSelfOrder.App:  posfastkey02:93
+2022-06-14 00:01:12,698 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:9
+2022-06-14 00:01:12,758 [ 1] INFO  SNSelfOrder.App:  psitem:59
+2022-06-14 00:01:12,762 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 00:01:12,763 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 00:01:12,931 [ 1] INFO  SNSelfOrder.App:  modifier:20
+2022-06-14 00:01:12,931 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 00:01:12,990 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 00:01:12,990 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637907616729903751
+2022-06-14 00:01:13,256 [ 1] INFO  SNSelfOrder.App:  itemmodifier:262
+2022-06-14 00:01:13,256 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637907616732566369
+2022-06-14 00:01:13,322 [ 1] INFO  SNSelfOrder.App:  itemvariety:46
+2022-06-14 00:01:13,330 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 00:01:13,330 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 00:03:23,157 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 00:03:23,169 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:03:23,170 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:03:23,170 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:03:23,171 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 00:03:23,171 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:03:23,171 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 00:03:23,710 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 00:03:23,710 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 00:03:23,710 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 00:03:23,710 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 00:03:23,710 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 00:03:23,710 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 00:03:23,710 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 00:03:24,826 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 00:03:25,257 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"c3a5f6bf0f2940a9bab6039a378cf4e9","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 00:03:25,311 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 00:03:25,434 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 00:03:32,453 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 00:03:32,454 [ 1] INFO  SNSelfOrder.App:  PageImage:5887
+2022-06-14 00:03:32,457 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 00:03:32,529 [ 1] INFO  SNSelfOrder.App:  posfastkey02:71
+2022-06-14 00:03:32,539 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 00:03:32,590 [ 1] INFO  SNSelfOrder.App:  psitem:50
+2022-06-14 00:03:32,593 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 00:03:32,595 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 00:03:32,755 [ 1] INFO  SNSelfOrder.App:  modifier:14
+2022-06-14 00:03:32,756 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 00:03:32,807 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 00:03:32,807 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637907618128071148
+2022-06-14 00:03:33,034 [ 1] INFO  SNSelfOrder.App:  itemmodifier:224
+2022-06-14 00:03:33,034 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637907618130348667
+2022-06-14 00:03:33,099 [ 1] INFO  SNSelfOrder.App:  itemvariety:47
+2022-06-14 00:03:33,110 [ 1] INFO  SNSelfOrder.App:  promotions:3
+2022-06-14 00:03:33,110 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 00:08:12,729 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 00:08:12,743 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:08:12,744 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:08:12,744 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:08:12,744 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 00:08:12,744 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:08:12,744 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 00:08:13,315 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 00:08:13,315 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 00:08:13,315 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 00:08:13,315 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 00:08:13,315 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 00:08:13,315 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 00:08:13,315 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 00:08:14,309 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 00:08:14,743 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"0c8a4cad1c1b4f75b07c4df8584f3f7d","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 00:08:14,788 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 00:08:14,838 [ 5] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 00:08:20,618 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 00:08:20,619 [ 1] INFO  SNSelfOrder.App:  PageImage:5769
+2022-06-14 00:08:20,622 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 00:08:20,696 [ 1] INFO  SNSelfOrder.App:  posfastkey02:73
+2022-06-14 00:08:20,707 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 00:08:20,755 [ 1] INFO  SNSelfOrder.App:  psitem:47
+2022-06-14 00:08:20,758 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 00:08:20,760 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 00:08:20,916 [ 1] INFO  SNSelfOrder.App:  modifier:18
+2022-06-14 00:08:20,916 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 00:08:20,967 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 00:08:20,967 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637907621009671743
+2022-06-14 00:08:21,202 [ 1] INFO  SNSelfOrder.App:  itemmodifier:231
+2022-06-14 00:08:21,202 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637907621012027820
+2022-06-14 00:08:21,270 [ 1] INFO  SNSelfOrder.App:  itemvariety:50
+2022-06-14 00:08:21,280 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 00:08:21,280 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 00:25:34,000 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 00:25:34,012 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:25:34,013 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:25:34,013 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:25:34,013 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 00:25:34,013 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:25:34,014 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 00:25:34,550 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 00:25:34,550 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 00:25:34,550 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 00:25:34,550 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 00:25:34,550 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 00:25:34,550 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 00:25:34,550 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 00:25:35,580 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 00:25:36,018 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"951347a7e7de4b3fa80582687f098058","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 00:25:36,064 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 00:25:36,111 [ 5] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 00:25:42,971 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 00:25:42,972 [ 1] INFO  SNSelfOrder.App:  PageImage:5949
+2022-06-14 00:25:42,976 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 00:25:43,051 [ 1] INFO  SNSelfOrder.App:  posfastkey02:74
+2022-06-14 00:25:43,060 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 00:25:43,107 [ 1] INFO  SNSelfOrder.App:  psitem:46
+2022-06-14 00:25:43,110 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 00:25:43,112 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 00:25:43,262 [ 1] INFO  SNSelfOrder.App:  modifier:13
+2022-06-14 00:25:43,263 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 00:25:43,308 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 00:25:43,309 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637907631433090501
+2022-06-14 00:25:43,543 [ 1] INFO  SNSelfOrder.App:  itemmodifier:230
+2022-06-14 00:25:43,543 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637907631435431593
+2022-06-14 00:25:43,612 [ 1] INFO  SNSelfOrder.App:  itemvariety:50
+2022-06-14 00:25:43,620 [ 1] INFO  SNSelfOrder.App:  promotions:3
+2022-06-14 00:25:43,620 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 00:26:24,233 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 00:26:24,246 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:26:24,247 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:26:24,247 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:26:24,247 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 00:26:24,248 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:26:24,248 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 00:26:24,975 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 00:26:24,975 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 00:26:24,975 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 00:26:24,975 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 00:26:24,975 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 00:26:24,975 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 00:26:24,975 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 00:26:26,026 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 00:26:26,433 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"ce0a65197388498a94ac0de0cec00002","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 00:26:26,469 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 00:26:26,514 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 00:26:31,464 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 00:26:31,465 [ 1] INFO  SNSelfOrder.App:  PageImage:5587
+2022-06-14 00:26:31,468 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 00:26:31,537 [ 1] INFO  SNSelfOrder.App:  posfastkey02:67
+2022-06-14 00:26:31,546 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 00:26:31,599 [ 1] INFO  SNSelfOrder.App:  psitem:52
+2022-06-14 00:26:31,602 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 00:26:31,605 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 00:26:31,751 [ 1] INFO  SNSelfOrder.App:  modifier:14
+2022-06-14 00:26:31,752 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 00:26:31,804 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 00:26:31,804 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637907631918043226
+2022-06-14 00:26:32,082 [ 1] INFO  SNSelfOrder.App:  itemmodifier:274
+2022-06-14 00:26:32,082 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637907631920826107
+2022-06-14 00:26:32,155 [ 1] INFO  SNSelfOrder.App:  itemvariety:52
+2022-06-14 00:26:32,165 [ 1] INFO  SNSelfOrder.App:  promotions:3
+2022-06-14 00:26:32,165 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 00:29:07,709 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 00:29:07,717 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:29:07,719 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:29:07,719 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:29:07,720 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 00:29:07,720 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 00:29:07,720 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 00:29:08,310 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 00:29:08,310 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 00:29:08,310 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 00:29:08,310 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 00:29:08,310 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 00:29:08,310 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 00:29:08,310 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 00:29:09,313 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 00:29:09,721 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"58728fdb69474ad1b4b01ef86af5d317","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 00:29:09,762 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 00:29:09,803 [ 5] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 00:29:15,019 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 00:29:15,021 [ 1] INFO  SNSelfOrder.App:  PageImage:7996
+2022-06-14 00:29:15,025 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 00:29:15,098 [ 1] INFO  SNSelfOrder.App:  posfastkey02:73
+2022-06-14 00:29:15,107 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 00:29:15,155 [ 1] INFO  SNSelfOrder.App:  psitem:48
+2022-06-14 00:29:15,159 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 00:29:15,161 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 00:29:15,314 [ 1] INFO  SNSelfOrder.App:  modifier:19
+2022-06-14 00:29:15,315 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 00:29:15,365 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 00:29:15,365 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637907633553651094
+2022-06-14 00:29:15,619 [ 1] INFO  SNSelfOrder.App:  itemmodifier:251
+2022-06-14 00:29:15,619 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637907633556197725
+2022-06-14 00:29:15,695 [ 1] INFO  SNSelfOrder.App:  itemvariety:57
+2022-06-14 00:29:15,705 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 00:29:15,705 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 10:17:52,080 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 10:17:52,107 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:17:52,110 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:17:52,110 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:17:52,111 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 10:17:52,111 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:17:52,111 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 10:17:53,031 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 10:17:53,031 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 10:17:53,031 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 10:17:53,031 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 10:17:53,031 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 10:17:53,031 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 10:17:53,031 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 10:17:54,569 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 10:17:55,142 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"e917e64c051b4c29abb3c58d48d6d579","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 10:17:55,184 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 10:17:55,238 [ 9] ERROR SNSelfOrder.App:  CheckCode 2 :0
+[Header]2022-06-14 10:18:54,154 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 10:18:54,167 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:18:54,168 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:18:54,168 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:18:54,169 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 10:18:54,169 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:18:54,169 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 10:18:54,802 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 10:18:54,802 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 10:18:54,802 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 10:18:54,802 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 10:18:54,802 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 10:18:54,802 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 10:18:54,802 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 10:18:55,819 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 10:18:56,264 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"a6511cd446484795935f33d3054b26ad","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 10:18:56,300 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 10:18:56,346 [ 5] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 10:19:01,527 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 10:19:01,528 [ 1] INFO  SNSelfOrder.App:  PageImage:6192
+2022-06-14 10:19:01,533 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 10:19:01,609 [ 1] INFO  SNSelfOrder.App:  posfastkey02:74
+2022-06-14 10:19:01,637 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:26
+2022-06-14 10:19:01,683 [ 1] INFO  SNSelfOrder.App:  psitem:45
+2022-06-14 10:19:01,687 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 10:19:01,689 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 10:19:01,834 [ 1] INFO  SNSelfOrder.App:  modifier:18
+2022-06-14 10:19:01,835 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 10:19:01,884 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 10:19:01,884 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637907987418848603
+2022-06-14 10:19:02,105 [ 1] INFO  SNSelfOrder.App:  itemmodifier:217
+2022-06-14 10:19:02,105 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637907987421056902
+2022-06-14 10:19:02,173 [ 1] INFO  SNSelfOrder.App:  itemvariety:50
+2022-06-14 10:19:02,181 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 10:19:02,181 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 10:22:27,482 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 10:22:27,494 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:22:27,495 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:22:27,495 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:22:27,495 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 10:22:27,495 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:22:27,495 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 10:22:28,045 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 10:22:28,045 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 10:22:28,045 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 10:22:28,045 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 10:22:28,045 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 10:22:28,045 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 10:22:28,045 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 10:22:29,027 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 10:22:29,438 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"8134d291463a4fb0af6ae176084a6a74","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 10:22:29,493 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 10:22:29,561 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 10:22:35,075 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 10:22:35,076 [ 1] INFO  SNSelfOrder.App:  PageImage:7071
+2022-06-14 10:22:35,080 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 10:22:35,153 [ 1] INFO  SNSelfOrder.App:  posfastkey02:72
+2022-06-14 10:22:35,161 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 10:22:35,205 [ 1] INFO  SNSelfOrder.App:  psitem:43
+2022-06-14 10:22:35,208 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 10:22:35,210 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 10:22:35,357 [ 1] INFO  SNSelfOrder.App:  modifier:20
+2022-06-14 10:22:35,358 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 10:22:35,401 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 10:22:35,401 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637907989554013754
+2022-06-14 10:22:35,621 [ 1] INFO  SNSelfOrder.App:  itemmodifier:216
+2022-06-14 10:22:35,621 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637907989556218244
+2022-06-14 10:22:35,687 [ 1] INFO  SNSelfOrder.App:  itemvariety:46
+2022-06-14 10:22:35,697 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 10:22:35,697 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 10:24:35,941 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 10:24:35,955 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:24:35,957 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:24:35,957 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:24:35,957 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 10:24:35,957 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:24:35,957 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 10:24:36,514 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 10:24:36,514 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 10:24:36,514 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 10:24:36,514 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 10:24:36,514 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 10:24:36,514 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 10:24:36,514 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 10:24:37,488 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 10:24:37,913 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"b956cd77457a40d4bd6af79a466e5404","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 10:24:37,952 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 10:24:38,005 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 10:24:43,870 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 10:24:43,872 [ 1] INFO  SNSelfOrder.App:  PageImage:9986
+2022-06-14 10:24:43,877 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 10:24:43,979 [ 1] INFO  SNSelfOrder.App:  posfastkey02:100
+2022-06-14 10:24:43,991 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:9
+2022-06-14 10:24:44,046 [ 1] INFO  SNSelfOrder.App:  psitem:53
+2022-06-14 10:24:44,049 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 10:24:44,051 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 10:24:44,245 [ 1] INFO  SNSelfOrder.App:  modifier:20
+2022-06-14 10:24:44,247 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 10:24:44,301 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:2
+2022-06-14 10:24:44,301 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637907990843013658
+2022-06-14 10:24:44,606 [ 1] INFO  SNSelfOrder.App:  itemmodifier:301
+2022-06-14 10:24:44,606 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637907990846062638
+2022-06-14 10:24:44,694 [ 1] INFO  SNSelfOrder.App:  itemvariety:63
+2022-06-14 10:24:44,720 [ 1] INFO  SNSelfOrder.App:  promotions:3
+2022-06-14 10:24:44,720 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 10:26:10,346 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 10:26:10,361 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:26:10,362 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:26:10,362 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:26:10,362 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 10:26:10,362 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:26:10,362 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 10:26:10,936 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 10:26:10,936 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 10:26:10,936 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 10:26:10,936 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 10:26:10,936 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 10:26:10,936 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 10:26:10,936 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 10:26:11,886 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 10:26:12,297 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"192f1c00602046e3bdfacd9bf5a0e263","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 10:26:12,336 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 10:26:12,382 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 10:26:18,053 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 10:26:18,054 [ 1] INFO  SNSelfOrder.App:  PageImage:5782
+2022-06-14 10:26:18,057 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 10:26:18,128 [ 1] INFO  SNSelfOrder.App:  posfastkey02:69
+2022-06-14 10:26:18,136 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 10:26:18,192 [ 1] INFO  SNSelfOrder.App:  psitem:54
+2022-06-14 10:26:18,195 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 10:26:18,197 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 10:26:18,349 [ 1] INFO  SNSelfOrder.App:  modifier:15
+2022-06-14 10:26:18,350 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 10:26:18,399 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 10:26:18,399 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637907991783994749
+2022-06-14 10:26:18,651 [ 1] INFO  SNSelfOrder.App:  itemmodifier:248
+2022-06-14 10:26:18,651 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637907991786515345
+2022-06-14 10:26:18,724 [ 1] INFO  SNSelfOrder.App:  itemvariety:53
+2022-06-14 10:26:18,736 [ 1] INFO  SNSelfOrder.App:  promotions:4
+2022-06-14 10:26:18,736 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 10:31:23,449 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 10:31:23,463 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:31:23,464 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:31:23,464 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:31:23,464 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 10:31:23,464 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 10:31:23,464 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 10:31:24,070 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 10:31:24,070 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 10:31:24,070 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 10:31:24,070 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 10:31:24,070 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 10:31:24,070 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 10:31:24,070 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+[Header]2022-06-14 11:56:35,764 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 11:56:35,780 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 11:56:35,783 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 11:56:35,783 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 11:56:35,783 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 11:56:35,783 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 11:56:35,783 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 11:56:36,550 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 11:56:36,550 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 11:56:36,550 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 11:56:36,550 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 11:56:36,550 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 11:56:36,550 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 11:56:36,550 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 11:56:37,847 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 11:56:38,320 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"4f0c3e7d142e4aeeadc67d2f19a15c24","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 11:56:38,375 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 11:56:38,434 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 11:56:44,838 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 11:56:44,839 [ 1] INFO  SNSelfOrder.App:  PageImage:8763
+2022-06-14 11:56:44,843 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 11:56:44,921 [ 1] INFO  SNSelfOrder.App:  posfastkey02:77
+2022-06-14 11:56:44,929 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 11:56:44,987 [ 1] INFO  SNSelfOrder.App:  psitem:56
+2022-06-14 11:56:44,990 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 11:56:44,992 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 11:56:45,138 [ 1] INFO  SNSelfOrder.App:  modifier:13
+2022-06-14 11:56:45,138 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 11:56:45,201 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:2
+2022-06-14 11:56:45,201 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908046052012476
+2022-06-14 11:56:45,491 [ 1] INFO  SNSelfOrder.App:  itemmodifier:285
+2022-06-14 11:56:45,491 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908046054915849
+2022-06-14 11:56:45,617 [ 1] INFO  SNSelfOrder.App:  itemvariety:89
+2022-06-14 11:56:45,625 [ 1] INFO  SNSelfOrder.App:  promotions:3
+2022-06-14 11:56:45,625 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 12:04:18,099 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 12:04:18,111 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:04:18,113 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:04:18,113 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:04:18,114 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 12:04:18,114 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:04:18,114 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 12:04:18,820 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 12:04:18,820 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:04:18,820 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:04:18,820 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 12:04:18,820 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 12:04:18,821 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 12:04:18,821 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 12:04:20,080 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:04:20,527 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"5298eeff63874622a3960bf45501e9c2","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:04:20,575 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 12:04:20,637 [ 5] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 12:04:26,823 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 12:04:26,824 [ 1] INFO  SNSelfOrder.App:  PageImage:5804
+2022-06-14 12:04:26,827 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 12:04:26,901 [ 1] INFO  SNSelfOrder.App:  posfastkey02:72
+2022-06-14 12:04:26,910 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 12:04:26,962 [ 1] INFO  SNSelfOrder.App:  psitem:50
+2022-06-14 12:04:26,965 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 12:04:26,967 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 12:04:27,125 [ 1] INFO  SNSelfOrder.App:  modifier:24
+2022-06-14 12:04:27,126 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 12:04:27,187 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 12:04:27,187 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908050671879531
+2022-06-14 12:04:27,491 [ 1] INFO  SNSelfOrder.App:  itemmodifier:298
+2022-06-14 12:04:27,491 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908050674913781
+2022-06-14 12:04:27,572 [ 1] INFO  SNSelfOrder.App:  itemvariety:61
+2022-06-14 12:04:27,580 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 12:04:27,580 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 12:09:37,731 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 12:09:37,745 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:09:37,746 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:09:37,746 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:09:37,746 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 12:09:37,746 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:09:37,746 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 12:09:38,407 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 12:09:38,407 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:09:38,407 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:09:38,407 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 12:09:38,407 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 12:09:38,407 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 12:09:38,407 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 12:09:39,519 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:09:39,935 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"d1fe3133af114f7d80b0e4b6e48e6f71","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:09:39,992 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 12:09:40,065 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 12:09:46,641 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 12:09:46,642 [ 1] INFO  SNSelfOrder.App:  PageImage:5926
+2022-06-14 12:09:46,645 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 12:09:46,724 [ 1] INFO  SNSelfOrder.App:  posfastkey02:78
+2022-06-14 12:09:46,737 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:10
+2022-06-14 12:09:46,786 [ 1] INFO  SNSelfOrder.App:  psitem:48
+2022-06-14 12:09:46,790 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 12:09:46,793 [ 1] INFO  SNSelfOrder.App:  itemcombo:2
+2022-06-14 12:09:46,962 [ 1] INFO  SNSelfOrder.App:  modifier:20
+2022-06-14 12:09:46,962 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 12:09:47,012 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:2
+2022-06-14 12:09:47,012 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908053870125515
+2022-06-14 12:09:47,256 [ 1] INFO  SNSelfOrder.App:  itemmodifier:240
+2022-06-14 12:09:47,256 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908053872566732
+2022-06-14 12:09:47,326 [ 1] INFO  SNSelfOrder.App:  itemvariety:49
+2022-06-14 12:09:47,338 [ 1] INFO  SNSelfOrder.App:  promotions:4
+2022-06-14 12:09:47,338 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 12:19:57,745 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 12:19:57,761 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:19:57,762 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:19:57,762 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:19:57,763 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 12:19:57,763 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:19:57,763 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 12:19:58,444 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 12:19:58,444 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:19:58,444 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:19:58,444 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 12:19:58,444 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 12:19:58,444 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 12:19:58,444 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 12:19:59,546 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:19:59,971 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"d07a92c803a14cea9b0801e706f8d8ee","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:20:00,016 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 12:20:00,061 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 12:20:06,102 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 12:20:06,103 [ 1] INFO  SNSelfOrder.App:  PageImage:5651
+2022-06-14 12:20:06,106 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 12:20:06,189 [ 1] INFO  SNSelfOrder.App:  posfastkey02:82
+2022-06-14 12:20:06,199 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 12:20:06,254 [ 1] INFO  SNSelfOrder.App:  psitem:54
+2022-06-14 12:20:06,258 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 12:20:06,260 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 12:20:06,403 [ 1] INFO  SNSelfOrder.App:  modifier:16
+2022-06-14 12:20:06,404 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 12:20:06,455 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 12:20:06,456 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908060064560031
+2022-06-14 12:20:06,724 [ 1] INFO  SNSelfOrder.App:  itemmodifier:265
+2022-06-14 12:20:06,724 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908060067249242
+2022-06-14 12:20:06,811 [ 1] INFO  SNSelfOrder.App:  itemvariety:66
+2022-06-14 12:20:06,823 [ 1] INFO  SNSelfOrder.App:  promotions:4
+2022-06-14 12:20:06,823 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 12:32:06,186 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 12:32:06,220 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:32:06,222 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:32:06,222 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:32:06,222 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 12:32:06,222 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:32:06,223 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 12:32:06,815 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 12:32:06,815 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:32:06,815 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:32:06,815 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 12:32:06,815 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 12:32:06,815 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 12:32:06,815 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 12:32:07,901 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:32:08,347 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"bc8eaec5be10444898d6b2e738629258","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:32:08,388 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 12:32:08,444 [ 6] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 12:32:14,597 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 12:32:14,598 [ 1] INFO  SNSelfOrder.App:  PageImage:6170
+2022-06-14 12:32:14,602 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 12:32:14,682 [ 1] INFO  SNSelfOrder.App:  posfastkey02:79
+2022-06-14 12:32:14,693 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 12:32:14,746 [ 1] INFO  SNSelfOrder.App:  psitem:53
+2022-06-14 12:32:14,751 [ 1] INFO  SNSelfOrder.App:  psitem image:4
+2022-06-14 12:32:14,756 [ 1] INFO  SNSelfOrder.App:  itemcombo:2
+2022-06-14 12:32:14,910 [ 1] INFO  SNSelfOrder.App:  modifier:19
+2022-06-14 12:32:14,910 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 12:32:14,962 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 12:32:14,962 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908067349622576
+2022-06-14 12:32:15,239 [ 1] INFO  SNSelfOrder.App:  itemmodifier:273
+2022-06-14 12:32:15,239 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908067352394335
+2022-06-14 12:32:15,315 [ 1] INFO  SNSelfOrder.App:  itemvariety:52
+2022-06-14 12:32:15,323 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 12:32:15,323 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 12:34:40,785 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 12:34:40,803 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:34:40,804 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:34:40,804 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:34:40,804 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 12:34:40,804 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:34:40,804 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 12:34:41,440 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 12:34:41,440 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:34:41,440 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:34:41,440 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 12:34:41,440 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 12:34:41,440 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 12:34:41,440 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 12:34:42,702 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:34:43,188 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"5c2243ffaede4cd789f58441f737c4e0","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:34:43,245 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 12:34:43,389 [ 5] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 12:34:52,862 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 12:34:52,863 [ 1] INFO  SNSelfOrder.App:  PageImage:5700
+2022-06-14 12:34:52,867 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 12:34:52,954 [ 1] INFO  SNSelfOrder.App:  posfastkey02:86
+2022-06-14 12:34:52,971 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 12:34:53,031 [ 1] INFO  SNSelfOrder.App:  psitem:58
+2022-06-14 12:34:53,035 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 12:34:53,038 [ 1] INFO  SNSelfOrder.App:  itemcombo:2
+2022-06-14 12:34:53,201 [ 1] INFO  SNSelfOrder.App:  modifier:16
+2022-06-14 12:34:53,202 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 12:34:53,252 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 12:34:53,252 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908068932528241
+2022-06-14 12:34:53,484 [ 1] INFO  SNSelfOrder.App:  itemmodifier:229
+2022-06-14 12:34:53,484 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908068934848999
+2022-06-14 12:34:53,562 [ 1] INFO  SNSelfOrder.App:  itemvariety:54
+2022-06-14 12:34:53,573 [ 1] INFO  SNSelfOrder.App:  promotions:4
+2022-06-14 12:34:53,573 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 12:40:40,135 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 12:40:40,147 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:40:40,148 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:40:40,148 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:40:40,149 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 12:40:40,149 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:40:40,149 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 12:40:40,801 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 12:40:40,801 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:40:40,801 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:40:40,801 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 12:40:40,801 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 12:40:40,802 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 12:40:40,802 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 12:40:41,990 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:40:42,441 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"bf8dc6d167454a85a153f1820dcb8708","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:40:42,484 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 12:40:42,537 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 12:40:48,516 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 12:40:48,517 [ 1] INFO  SNSelfOrder.App:  PageImage:5776
+2022-06-14 12:40:48,521 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 12:40:48,596 [ 1] INFO  SNSelfOrder.App:  posfastkey02:75
+2022-06-14 12:40:48,605 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 12:40:48,655 [ 1] INFO  SNSelfOrder.App:  psitem:49
+2022-06-14 12:40:48,658 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 12:40:48,660 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 12:40:48,813 [ 1] INFO  SNSelfOrder.App:  modifier:19
+2022-06-14 12:40:48,814 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 12:40:48,863 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 12:40:48,863 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908072488636404
+2022-06-14 12:40:49,094 [ 1] INFO  SNSelfOrder.App:  itemmodifier:227
+2022-06-14 12:40:49,094 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908072490941056
+2022-06-14 12:40:49,166 [ 1] INFO  SNSelfOrder.App:  itemvariety:54
+2022-06-14 12:40:49,176 [ 1] INFO  SNSelfOrder.App:  promotions:3
+2022-06-14 12:40:49,176 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 12:45:28,727 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 12:45:28,742 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:45:28,744 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:45:28,744 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:45:28,744 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 12:45:28,744 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:45:28,745 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 12:45:29,402 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 12:45:29,402 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:45:29,402 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:45:29,402 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 12:45:29,402 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 12:45:29,402 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 12:45:29,402 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 12:45:30,760 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:45:31,208 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"64ce24c0f7f94d3e8b37ed9a4b9de6ad","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:45:31,253 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 12:45:31,311 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 12:45:37,483 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 12:45:37,485 [ 1] INFO  SNSelfOrder.App:  PageImage:9636
+2022-06-14 12:45:37,489 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 12:45:37,587 [ 1] INFO  SNSelfOrder.App:  posfastkey02:96
+2022-06-14 12:45:37,596 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 12:45:37,659 [ 1] INFO  SNSelfOrder.App:  psitem:62
+2022-06-14 12:45:37,662 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 12:45:37,664 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 12:45:37,817 [ 1] INFO  SNSelfOrder.App:  modifier:16
+2022-06-14 12:45:37,818 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 12:45:37,887 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 12:45:37,888 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908075378880381
+2022-06-14 12:45:38,148 [ 1] INFO  SNSelfOrder.App:  itemmodifier:258
+2022-06-14 12:45:38,148 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908075381485139
+2022-06-14 12:45:38,218 [ 1] INFO  SNSelfOrder.App:  itemvariety:52
+2022-06-14 12:45:38,227 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 12:45:38,227 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 12:51:36,410 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 12:51:36,423 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:51:36,425 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:51:36,425 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:51:36,425 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 12:51:36,425 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 12:51:36,426 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 12:51:37,104 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 12:51:37,104 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:51:37,104 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 12:51:37,104 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 12:51:37,104 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 12:51:37,104 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 12:51:37,104 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 12:51:38,244 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:51:38,667 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"8cfc89008e964dbcb44878699a445130","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 12:51:38,715 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 12:51:38,769 [ 5] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 12:51:44,557 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 12:51:44,559 [ 1] INFO  SNSelfOrder.App:  PageImage:6542
+2022-06-14 12:51:44,562 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 12:51:44,655 [ 1] INFO  SNSelfOrder.App:  posfastkey02:92
+2022-06-14 12:51:44,666 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 12:51:44,726 [ 1] INFO  SNSelfOrder.App:  psitem:60
+2022-06-14 12:51:44,731 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 12:51:44,733 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 12:51:44,886 [ 1] INFO  SNSelfOrder.App:  modifier:21
+2022-06-14 12:51:44,887 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 12:51:44,945 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:3
+2022-06-14 12:51:44,945 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908079049459083
+2022-06-14 12:51:45,227 [ 1] INFO  SNSelfOrder.App:  itemmodifier:277
+2022-06-14 12:51:45,227 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908079052273567
+2022-06-14 12:51:45,328 [ 1] INFO  SNSelfOrder.App:  itemvariety:68
+2022-06-14 12:51:45,336 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 12:51:45,336 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 13:02:57,113 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 13:02:57,126 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:02:57,127 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:02:57,127 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:02:57,127 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 13:02:57,127 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:02:57,127 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 13:02:57,746 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 13:02:57,746 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 13:02:57,746 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 13:02:57,746 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 13:02:57,746 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 13:02:57,746 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 13:02:57,746 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 13:02:58,825 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 13:02:59,345 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"cba5a5112bcb4a918055105dad8c36ba","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 13:02:59,395 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 13:02:59,442 [ 5] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 13:03:05,596 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 13:03:05,597 [ 1] INFO  SNSelfOrder.App:  PageImage:8416
+2022-06-14 13:03:05,601 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 13:03:05,681 [ 1] INFO  SNSelfOrder.App:  posfastkey02:79
+2022-06-14 13:03:05,690 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 13:03:05,740 [ 1] INFO  SNSelfOrder.App:  psitem:50
+2022-06-14 13:03:05,744 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 13:03:05,746 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 13:03:05,906 [ 1] INFO  SNSelfOrder.App:  modifier:18
+2022-06-14 13:03:05,906 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 13:03:05,955 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 13:03:05,956 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908085859559986
+2022-06-14 13:03:06,205 [ 1] INFO  SNSelfOrder.App:  itemmodifier:246
+2022-06-14 13:03:06,206 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908085862059954
+2022-06-14 13:03:06,282 [ 1] INFO  SNSelfOrder.App:  itemvariety:56
+2022-06-14 13:03:06,290 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 13:03:06,290 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 13:22:28,109 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 13:22:28,122 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:22:28,126 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:22:28,126 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:22:28,127 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 13:22:28,127 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:22:28,127 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 13:22:28,766 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 13:22:28,766 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 13:22:28,766 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 13:22:28,766 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 13:22:28,766 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 13:22:28,766 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 13:22:28,766 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 13:22:29,879 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 13:22:30,354 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"1bde1281f9ee42cfb6ebb26c0c021d33","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 13:22:30,398 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 13:22:30,445 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 13:22:36,352 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 13:22:36,353 [ 1] INFO  SNSelfOrder.App:  PageImage:6454
+2022-06-14 13:22:36,357 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 13:22:36,434 [ 1] INFO  SNSelfOrder.App:  posfastkey02:76
+2022-06-14 13:22:36,444 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 13:22:36,495 [ 1] INFO  SNSelfOrder.App:  psitem:50
+2022-06-14 13:22:36,498 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 13:22:36,500 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 13:22:36,666 [ 1] INFO  SNSelfOrder.App:  modifier:14
+2022-06-14 13:22:36,667 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 13:22:36,720 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 13:22:36,720 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908097567203749
+2022-06-14 13:22:36,961 [ 1] INFO  SNSelfOrder.App:  itemmodifier:240
+2022-06-14 13:22:36,962 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908097569620062
+2022-06-14 13:22:37,030 [ 1] INFO  SNSelfOrder.App:  itemvariety:48
+2022-06-14 13:22:37,041 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 13:22:37,041 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 13:23:27,165 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 13:23:27,179 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:23:27,180 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:23:27,180 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:23:27,181 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 13:23:27,181 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:23:27,181 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 13:23:27,834 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 13:23:27,834 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 13:23:27,834 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 13:23:27,834 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 13:23:27,834 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 13:23:27,835 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 13:23:27,835 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 13:23:28,797 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 13:23:29,240 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"71f262b37a2343a3a3801607f34c68dd","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 13:23:29,285 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 13:23:29,330 [ 6] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 13:23:35,496 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 13:23:35,498 [ 1] INFO  SNSelfOrder.App:  PageImage:6154
+2022-06-14 13:23:35,501 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 13:23:35,583 [ 1] INFO  SNSelfOrder.App:  posfastkey02:80
+2022-06-14 13:23:35,592 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 13:23:35,639 [ 1] INFO  SNSelfOrder.App:  psitem:46
+2022-06-14 13:23:35,642 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 13:23:35,644 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 13:23:35,789 [ 1] INFO  SNSelfOrder.App:  modifier:18
+2022-06-14 13:23:35,789 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 13:23:35,838 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 13:23:35,838 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908098158382299
+2022-06-14 13:23:36,075 [ 1] INFO  SNSelfOrder.App:  itemmodifier:234
+2022-06-14 13:23:36,075 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908098160759860
+2022-06-14 13:23:36,150 [ 1] INFO  SNSelfOrder.App:  itemvariety:51
+2022-06-14 13:23:36,160 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 13:23:36,160 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 13:25:35,373 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 13:25:35,386 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:25:35,387 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:25:35,387 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:25:35,387 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 13:25:35,387 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:25:35,387 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 13:25:36,053 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 13:25:36,053 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 13:25:36,053 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 13:25:36,053 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 13:25:36,053 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 13:25:36,053 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 13:25:36,053 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 13:25:37,140 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 13:25:37,562 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"d3a902d680224f7ea21eb31cda273d5e","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 13:25:37,610 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 13:25:37,668 [ 5] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 13:25:43,067 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 13:25:43,068 [ 1] INFO  SNSelfOrder.App:  PageImage:5584
+2022-06-14 13:25:43,071 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 13:25:43,154 [ 1] INFO  SNSelfOrder.App:  posfastkey02:82
+2022-06-14 13:25:43,163 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 13:25:43,218 [ 1] INFO  SNSelfOrder.App:  psitem:54
+2022-06-14 13:25:43,222 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 13:25:43,224 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 13:25:43,374 [ 1] INFO  SNSelfOrder.App:  modifier:19
+2022-06-14 13:25:43,375 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 13:25:43,425 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 13:25:43,425 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908099434256030
+2022-06-14 13:25:43,715 [ 1] INFO  SNSelfOrder.App:  itemmodifier:286
+2022-06-14 13:25:43,715 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908099437153295
+2022-06-14 13:25:43,791 [ 1] INFO  SNSelfOrder.App:  itemvariety:55
+2022-06-14 13:25:43,800 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 13:25:43,801 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 13:27:16,320 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 13:27:16,342 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:27:16,343 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:27:16,343 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:27:16,344 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 13:27:16,344 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 13:27:16,344 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 13:27:17,089 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 13:27:17,089 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 13:27:17,089 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 13:27:17,089 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 13:27:17,089 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 13:27:17,089 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 13:27:17,089 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 13:27:18,396 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 13:27:18,830 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"47a75878a44c48d8aa8a2c5ec8bf5835","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 13:27:18,889 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 13:27:18,944 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 13:27:25,149 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 13:27:25,150 [ 1] INFO  SNSelfOrder.App:  PageImage:5684
+2022-06-14 13:27:25,154 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 13:27:25,249 [ 1] INFO  SNSelfOrder.App:  posfastkey02:93
+2022-06-14 13:27:25,261 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:9
+2022-06-14 13:27:25,319 [ 1] INFO  SNSelfOrder.App:  psitem:57
+2022-06-14 13:27:25,323 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 13:27:25,325 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 13:27:25,483 [ 1] INFO  SNSelfOrder.App:  modifier:24
+2022-06-14 13:27:25,484 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 13:27:25,548 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:2
+2022-06-14 13:27:25,549 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908100455490248
+2022-06-14 13:27:25,875 [ 1] INFO  SNSelfOrder.App:  itemmodifier:323
+2022-06-14 13:27:25,876 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908100458760345
+2022-06-14 13:27:25,954 [ 1] INFO  SNSelfOrder.App:  itemvariety:57
+2022-06-14 13:27:25,963 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 13:27:25,963 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 15:03:24,904 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 15:03:24,922 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 15:03:24,923 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 15:03:24,923 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 15:03:24,924 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 15:03:24,924 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 15:03:24,924 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 15:03:25,556 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 15:03:25,556 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 15:03:25,556 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 15:03:25,556 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 15:03:25,556 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 15:03:25,556 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 15:03:25,557 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 15:03:26,763 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 15:03:27,196 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"ec5dc84e51dc4ce88fca27088d354dc7","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 15:03:27,239 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 15:03:27,296 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 15:03:33,473 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 15:03:33,474 [ 1] INFO  SNSelfOrder.App:  PageImage:5845
+2022-06-14 15:03:33,478 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 15:03:33,556 [ 1] INFO  SNSelfOrder.App:  posfastkey02:76
+2022-06-14 15:03:33,564 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 15:03:33,608 [ 1] INFO  SNSelfOrder.App:  psitem:43
+2022-06-14 15:03:33,611 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 15:03:33,613 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 15:03:33,762 [ 1] INFO  SNSelfOrder.App:  modifier:24
+2022-06-14 15:03:33,763 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 15:03:33,809 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 15:03:33,809 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908158138093650
+2022-06-14 15:03:34,031 [ 1] INFO  SNSelfOrder.App:  itemmodifier:218
+2022-06-14 15:03:34,031 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908158140316468
+2022-06-14 15:03:34,097 [ 1] INFO  SNSelfOrder.App:  itemvariety:48
+2022-06-14 15:03:34,104 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 15:03:34,104 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 15:06:31,509 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 15:06:31,524 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 15:06:31,525 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 15:06:31,525 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 15:06:31,525 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 15:06:31,525 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 15:06:31,525 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 15:06:32,154 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 15:06:32,154 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 15:06:32,154 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 15:06:32,154 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 15:06:32,154 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 15:06:32,154 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 15:06:32,154 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 15:06:33,178 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 15:06:33,579 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"7c6e1d1cb64b428dbf5a235ff704428d","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 15:06:33,623 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 15:06:33,688 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 15:06:40,105 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 15:06:40,106 [ 1] INFO  SNSelfOrder.App:  PageImage:9528
+2022-06-14 15:06:40,110 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 15:06:40,187 [ 1] INFO  SNSelfOrder.App:  posfastkey02:75
+2022-06-14 15:06:40,196 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 15:06:40,246 [ 1] INFO  SNSelfOrder.App:  psitem:49
+2022-06-14 15:06:40,250 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 15:06:40,252 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 15:06:40,404 [ 1] INFO  SNSelfOrder.App:  modifier:14
+2022-06-14 15:06:40,404 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 15:06:40,454 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:2
+2022-06-14 15:06:40,454 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908160004546157
+2022-06-14 15:06:40,698 [ 1] INFO  SNSelfOrder.App:  itemmodifier:239
+2022-06-14 15:06:40,698 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908160006984155
+2022-06-14 15:06:40,772 [ 1] INFO  SNSelfOrder.App:  itemvariety:48
+2022-06-14 15:06:40,781 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 15:06:40,781 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 15:38:53,987 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 15:38:54,003 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 15:38:54,004 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 15:38:54,004 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 15:38:54,004 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 15:38:54,004 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 15:38:54,004 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 15:38:54,649 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 15:38:54,649 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 15:38:54,649 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 15:38:54,649 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 15:38:54,649 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 15:38:54,649 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 15:38:54,649 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 15:38:55,856 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 15:38:56,287 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"633362338b06407c996c55b8566ce839","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 15:38:56,343 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 15:38:56,407 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 15:39:02,541 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 15:39:02,542 [ 1] INFO  SNSelfOrder.App:  PageImage:6355
+2022-06-14 15:39:02,545 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 15:39:02,620 [ 1] INFO  SNSelfOrder.App:  posfastkey02:74
+2022-06-14 15:39:02,629 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 15:39:02,679 [ 1] INFO  SNSelfOrder.App:  psitem:48
+2022-06-14 15:39:02,682 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 15:39:02,684 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 15:39:02,835 [ 1] INFO  SNSelfOrder.App:  modifier:17
+2022-06-14 15:39:02,836 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 15:39:02,882 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 15:39:02,882 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908179428829422
+2022-06-14 15:39:03,116 [ 1] INFO  SNSelfOrder.App:  itemmodifier:229
+2022-06-14 15:39:03,116 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908179431161021
+2022-06-14 15:39:03,189 [ 1] INFO  SNSelfOrder.App:  itemvariety:54
+2022-06-14 15:39:03,199 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 15:39:03,199 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 16:02:48,539 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 16:02:48,554 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:02:48,555 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:02:48,555 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:02:48,555 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 16:02:48,555 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:02:48,555 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 16:02:49,247 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 16:02:49,247 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 16:02:49,247 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 16:02:49,247 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 16:02:49,247 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 16:02:49,247 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 16:02:49,247 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 16:02:50,350 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 16:02:50,800 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"7e4986126f2f4892aee0650cf7961758","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 16:02:50,847 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 16:02:50,903 [ 6] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 16:02:57,045 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 16:02:57,046 [ 1] INFO  SNSelfOrder.App:  PageImage:5739
+2022-06-14 16:02:57,049 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 16:02:57,128 [ 1] INFO  SNSelfOrder.App:  posfastkey02:78
+2022-06-14 16:02:57,137 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 16:02:57,189 [ 1] INFO  SNSelfOrder.App:  psitem:51
+2022-06-14 16:02:57,193 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 16:02:57,195 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 16:02:57,345 [ 1] INFO  SNSelfOrder.App:  modifier:19
+2022-06-14 16:02:57,346 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 16:02:57,397 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 16:02:57,397 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908193773977588
+2022-06-14 16:02:57,645 [ 1] INFO  SNSelfOrder.App:  itemmodifier:243
+2022-06-14 16:02:57,645 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908193776452649
+2022-06-14 16:02:57,715 [ 1] INFO  SNSelfOrder.App:  itemvariety:51
+2022-06-14 16:02:57,723 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 16:02:57,724 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 16:04:42,410 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 16:04:42,422 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:04:42,424 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:04:42,424 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:04:42,424 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 16:04:42,424 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:04:42,424 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 16:04:43,101 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 16:04:43,101 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 16:04:43,101 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 16:04:43,101 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 16:04:43,101 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 16:04:43,101 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 16:04:43,101 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 16:04:44,179 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 16:04:44,583 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"30a9322c2ec84334ac7379b63465343b","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 16:04:44,629 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 16:04:44,681 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 16:04:50,842 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 16:04:50,844 [ 1] INFO  SNSelfOrder.App:  PageImage:9425
+2022-06-14 16:04:50,848 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 16:04:50,956 [ 1] INFO  SNSelfOrder.App:  posfastkey02:106
+2022-06-14 16:04:50,965 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 16:04:51,044 [ 1] INFO  SNSelfOrder.App:  psitem:78
+2022-06-14 16:04:51,050 [ 1] INFO  SNSelfOrder.App:  psitem image:5
+2022-06-14 16:04:51,054 [ 1] INFO  SNSelfOrder.App:  itemcombo:3
+2022-06-14 16:04:51,229 [ 1] INFO  SNSelfOrder.App:  modifier:26
+2022-06-14 16:04:51,230 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 16:04:51,304 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:2
+2022-06-14 16:04:51,304 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908194913046091
+2022-06-14 16:04:51,673 [ 1] INFO  SNSelfOrder.App:  itemmodifier:364
+2022-06-14 16:04:51,673 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908194916732420
+2022-06-14 16:04:51,755 [ 1] INFO  SNSelfOrder.App:  itemvariety:57
+2022-06-14 16:04:51,762 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 16:04:51,763 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 16:05:48,264 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 16:05:48,280 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:05:48,282 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:05:48,282 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:05:48,282 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 16:05:48,282 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:05:48,282 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 16:05:48,935 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 16:05:48,935 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 16:05:48,935 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 16:05:48,935 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 16:05:48,935 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 16:05:48,935 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 16:05:48,935 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 16:05:50,209 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 16:05:50,614 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"58707bb75f5b4f8a8b24151638fcc60e","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 16:05:50,659 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 16:05:50,702 [ 5] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 16:05:56,496 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 16:05:56,498 [ 1] INFO  SNSelfOrder.App:  PageImage:9153
+2022-06-14 16:05:56,502 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 16:05:56,614 [ 1] INFO  SNSelfOrder.App:  posfastkey02:111
+2022-06-14 16:05:56,625 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:8
+2022-06-14 16:05:56,689 [ 1] INFO  SNSelfOrder.App:  psitem:63
+2022-06-14 16:05:56,694 [ 1] INFO  SNSelfOrder.App:  psitem image:5
+2022-06-14 16:05:56,698 [ 1] INFO  SNSelfOrder.App:  itemcombo:2
+2022-06-14 16:05:56,876 [ 1] INFO  SNSelfOrder.App:  modifier:26
+2022-06-14 16:05:56,877 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 16:05:56,962 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:3
+2022-06-14 16:05:56,962 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908195569628228
+2022-06-14 16:05:57,419 [ 1] INFO  SNSelfOrder.App:  itemmodifier:452
+2022-06-14 16:05:57,419 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908195574197239
+2022-06-14 16:05:57,536 [ 1] INFO  SNSelfOrder.App:  itemvariety:87
+2022-06-14 16:05:57,546 [ 1] INFO  SNSelfOrder.App:  promotions:4
+2022-06-14 16:05:57,546 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 16:11:28,661 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 16:11:28,677 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:11:28,677 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:11:28,677 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:11:28,678 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 16:11:28,678 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 16:11:28,678 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 16:11:29,298 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 16:11:29,298 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 16:11:29,298 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 16:11:29,298 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 16:11:29,298 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 16:11:29,298 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 16:11:29,298 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 16:11:30,379 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 16:11:30,787 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"7a68088035fb463a81fd0b27606a9999","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 16:11:30,833 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 16:11:30,901 [ 6] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 16:11:36,518 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 16:11:36,519 [ 1] INFO  SNSelfOrder.App:  PageImage:8134
+2022-06-14 16:11:36,523 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 16:11:36,632 [ 1] INFO  SNSelfOrder.App:  posfastkey02:107
+2022-06-14 16:11:36,642 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 16:11:36,694 [ 1] INFO  SNSelfOrder.App:  psitem:52
+2022-06-14 16:11:36,698 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 16:11:36,700 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 16:11:36,880 [ 1] INFO  SNSelfOrder.App:  modifier:26
+2022-06-14 16:11:36,881 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 16:11:36,957 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:3
+2022-06-14 16:11:36,958 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908198969579769
+2022-06-14 16:11:37,344 [ 1] INFO  SNSelfOrder.App:  itemmodifier:383
+2022-06-14 16:11:37,344 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908198973447098
+2022-06-14 16:11:37,484 [ 1] INFO  SNSelfOrder.App:  itemvariety:101
+2022-06-14 16:11:37,495 [ 1] INFO  SNSelfOrder.App:  promotions:5
+2022-06-14 16:11:37,495 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 17:47:15,124 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 17:47:15,141 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 17:47:15,142 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 17:47:15,142 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 17:47:15,142 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 17:47:15,143 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 17:47:15,143 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 17:47:15,728 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 17:47:15,728 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 17:47:15,728 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 17:47:15,728 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 17:47:15,728 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 17:47:15,729 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 17:47:15,729 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 17:47:16,796 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 17:47:17,226 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"e4811f4530ee4e6abf683e602302df30","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 17:47:17,269 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 17:47:17,316 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 17:47:24,218 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 17:47:24,219 [ 1] INFO  SNSelfOrder.App:  PageImage:9097
+2022-06-14 17:47:24,222 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 17:47:24,315 [ 1] INFO  SNSelfOrder.App:  posfastkey02:91
+2022-06-14 17:47:24,326 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:8
+2022-06-14 17:47:24,384 [ 1] INFO  SNSelfOrder.App:  psitem:56
+2022-06-14 17:47:24,387 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 17:47:24,390 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 17:47:24,554 [ 1] INFO  SNSelfOrder.App:  modifier:26
+2022-06-14 17:47:24,555 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 17:47:24,614 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 17:47:24,614 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908256446146277
+2022-06-14 17:47:24,950 [ 1] INFO  SNSelfOrder.App:  itemmodifier:332
+2022-06-14 17:47:24,950 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908256449506974
+2022-06-14 17:47:25,043 [ 1] INFO  SNSelfOrder.App:  itemvariety:65
+2022-06-14 17:47:25,053 [ 1] INFO  SNSelfOrder.App:  promotions:3
+2022-06-14 17:47:25,053 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 17:48:22,820 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 17:48:22,835 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 17:48:22,836 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 17:48:22,836 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 17:48:22,836 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 17:48:22,836 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 17:48:22,836 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 17:48:23,497 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 17:48:23,497 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 17:48:23,497 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 17:48:23,497 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 17:48:23,497 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 17:48:23,497 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 17:48:23,497 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 17:48:24,738 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 17:48:25,146 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"0d32ace1c4e44711b2c299bd8ecfb8c4","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 17:48:25,184 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 17:48:25,225 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 17:48:30,817 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 17:48:30,818 [ 1] INFO  SNSelfOrder.App:  PageImage:6199
+2022-06-14 17:48:30,822 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 17:48:30,896 [ 1] INFO  SNSelfOrder.App:  posfastkey02:73
+2022-06-14 17:48:30,904 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 17:48:30,950 [ 1] INFO  SNSelfOrder.App:  psitem:45
+2022-06-14 17:48:30,954 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 17:48:30,956 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 17:48:31,098 [ 1] INFO  SNSelfOrder.App:  modifier:19
+2022-06-14 17:48:31,098 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 17:48:31,144 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 17:48:31,144 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908257111446318
+2022-06-14 17:48:31,379 [ 1] INFO  SNSelfOrder.App:  itemmodifier:231
+2022-06-14 17:48:31,379 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908257113792467
+2022-06-14 17:48:31,444 [ 1] INFO  SNSelfOrder.App:  itemvariety:48
+2022-06-14 17:48:31,453 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 17:48:31,453 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 17:51:40,361 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 17:51:40,385 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 17:51:40,389 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 17:51:40,389 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 17:51:40,389 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 17:51:40,389 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 17:51:40,390 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 17:51:41,121 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 17:51:41,121 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 17:51:41,121 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 17:51:41,121 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 17:51:41,121 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 17:51:41,121 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 17:51:41,121 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 17:51:42,183 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 17:51:42,600 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"7a4043e59a074075a40c74edba8b3ddc","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 17:51:42,638 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 17:51:42,684 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 17:51:49,473 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 17:51:49,475 [ 1] INFO  SNSelfOrder.App:  PageImage:5870
+2022-06-14 17:51:49,478 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 17:51:49,549 [ 1] INFO  SNSelfOrder.App:  posfastkey02:69
+2022-06-14 17:51:49,557 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:5
+2022-06-14 17:51:49,603 [ 1] INFO  SNSelfOrder.App:  psitem:45
+2022-06-14 17:51:49,606 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 17:51:49,609 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 17:51:49,765 [ 1] INFO  SNSelfOrder.App:  modifier:29
+2022-06-14 17:51:49,766 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 17:51:49,829 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:3
+2022-06-14 17:51:49,829 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908259098297987
+2022-06-14 17:51:50,050 [ 1] INFO  SNSelfOrder.App:  itemmodifier:216
+2022-06-14 17:51:50,050 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908259100503439
+2022-06-14 17:51:50,117 [ 1] INFO  SNSelfOrder.App:  itemvariety:47
+2022-06-14 17:51:50,125 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 17:51:50,125 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 18:41:45,933 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 18:41:45,947 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 18:41:45,948 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 18:41:45,948 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 18:41:45,948 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 18:41:45,948 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 18:41:45,949 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 18:41:46,570 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 18:41:46,570 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 18:41:46,570 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 18:41:46,570 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 18:41:46,570 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 18:41:46,570 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 18:41:46,570 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 18:41:47,748 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 18:41:48,198 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"a9b05d63e84748948d3e494e1a36015e","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 18:41:48,240 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 18:41:48,286 [ 5] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 18:41:53,602 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 18:41:53,603 [ 1] INFO  SNSelfOrder.App:  PageImage:5614
+2022-06-14 18:41:53,607 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 18:41:53,679 [ 1] INFO  SNSelfOrder.App:  posfastkey02:71
+2022-06-14 18:41:53,687 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:5
+2022-06-14 18:41:53,735 [ 1] INFO  SNSelfOrder.App:  psitem:46
+2022-06-14 18:41:53,738 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 18:41:53,740 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 18:41:53,885 [ 1] INFO  SNSelfOrder.App:  modifier:18
+2022-06-14 18:41:53,886 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 18:41:53,932 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 18:41:53,932 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908289139328545
+2022-06-14 18:41:54,180 [ 1] INFO  SNSelfOrder.App:  itemmodifier:243
+2022-06-14 18:41:54,180 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908289141808831
+2022-06-14 18:41:54,272 [ 1] INFO  SNSelfOrder.App:  itemvariety:69
+2022-06-14 18:41:54,278 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 18:41:54,278 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 18:47:16,575 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 18:47:16,592 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 18:47:16,593 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 18:47:16,593 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 18:47:16,594 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 18:47:16,594 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 18:47:16,594 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 18:47:17,194 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 18:47:17,195 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 18:47:17,195 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 18:47:17,195 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 18:47:17,195 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 18:47:17,195 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 18:47:17,195 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 18:47:18,259 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 18:47:18,702 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"d63dde2e14c841e48fa4287e845529bc","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 18:47:18,747 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 18:47:18,791 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 18:47:24,692 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 18:47:24,693 [ 1] INFO  SNSelfOrder.App:  PageImage:5587
+2022-06-14 18:47:24,696 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 18:47:24,769 [ 1] INFO  SNSelfOrder.App:  posfastkey02:71
+2022-06-14 18:47:24,778 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 18:47:24,828 [ 1] INFO  SNSelfOrder.App:  psitem:49
+2022-06-14 18:47:24,831 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 18:47:24,835 [ 1] INFO  SNSelfOrder.App:  itemcombo:2
+2022-06-14 18:47:24,988 [ 1] INFO  SNSelfOrder.App:  modifier:13
+2022-06-14 18:47:24,989 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 18:47:25,034 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 18:47:25,034 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908292450340654
+2022-06-14 18:47:25,270 [ 1] INFO  SNSelfOrder.App:  itemmodifier:233
+2022-06-14 18:47:25,270 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908292452709556
+2022-06-14 18:47:25,343 [ 1] INFO  SNSelfOrder.App:  itemvariety:50
+2022-06-14 18:47:25,353 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 18:47:25,353 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 20:02:21,949 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 20:02:21,970 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:02:21,971 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:02:21,971 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:02:21,972 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 20:02:21,972 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:02:21,972 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 20:02:22,570 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 20:02:22,570 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 20:02:22,570 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 20:02:22,570 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 20:02:22,570 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 20:02:22,570 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 20:02:22,570 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 20:02:23,643 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 20:02:24,087 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"6412586418ca45009d20f6e5c90e81ec","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 20:02:24,134 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 20:02:24,183 [ 5] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 20:02:29,938 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 20:02:29,939 [ 1] INFO  SNSelfOrder.App:  PageImage:5866
+2022-06-14 20:02:29,943 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 20:02:30,018 [ 1] INFO  SNSelfOrder.App:  posfastkey02:74
+2022-06-14 20:02:30,027 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 20:02:30,079 [ 1] INFO  SNSelfOrder.App:  psitem:51
+2022-06-14 20:02:30,082 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 20:02:30,084 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 20:02:30,234 [ 1] INFO  SNSelfOrder.App:  modifier:13
+2022-06-14 20:02:30,235 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 20:02:30,286 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 20:02:30,286 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908337502862638
+2022-06-14 20:02:30,529 [ 1] INFO  SNSelfOrder.App:  itemmodifier:240
+2022-06-14 20:02:30,529 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908337505296620
+2022-06-14 20:02:30,604 [ 1] INFO  SNSelfOrder.App:  itemvariety:55
+2022-06-14 20:02:30,613 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 20:02:30,613 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 20:10:18,069 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 20:10:18,084 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:10:18,086 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:10:18,086 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:10:18,086 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 20:10:18,086 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:10:18,086 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 20:10:18,669 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 20:10:18,669 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 20:10:18,669 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 20:10:18,669 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 20:10:18,670 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 20:10:18,670 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 20:10:18,670 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 20:10:19,745 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 20:10:20,176 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"c96ead8bd56b48de912c4531ddbafcdb","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 20:10:20,226 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 20:10:20,274 [ 6] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 20:10:30,450 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 20:10:30,451 [ 1] INFO  SNSelfOrder.App:  PageImage:5948
+2022-06-14 20:10:30,454 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 20:10:30,530 [ 1] INFO  SNSelfOrder.App:  posfastkey02:74
+2022-06-14 20:10:30,539 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 20:10:30,587 [ 1] INFO  SNSelfOrder.App:  psitem:47
+2022-06-14 20:10:30,590 [ 1] INFO  SNSelfOrder.App:  psitem image:2
+2022-06-14 20:10:30,592 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 20:10:30,736 [ 1] INFO  SNSelfOrder.App:  modifier:14
+2022-06-14 20:10:30,737 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 20:10:30,783 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:1
+2022-06-14 20:10:30,783 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908342307839126
+2022-06-14 20:10:31,014 [ 1] INFO  SNSelfOrder.App:  itemmodifier:227
+2022-06-14 20:10:31,014 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908342310144061
+2022-06-14 20:10:31,080 [ 1] INFO  SNSelfOrder.App:  itemvariety:49
+2022-06-14 20:10:31,088 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 20:10:31,088 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 20:12:05,376 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 20:12:05,388 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:12:05,389 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:12:05,389 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:12:05,389 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 20:12:05,389 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:12:05,390 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 20:12:06,056 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 20:12:06,056 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 20:12:06,056 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 20:12:06,056 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 20:12:06,056 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 20:12:06,056 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 20:12:06,056 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 20:12:07,181 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 20:12:07,616 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"1562b1adae6840a1aacc455c1902c78a","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 20:12:07,668 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 20:12:07,731 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 20:12:14,237 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 20:12:14,238 [ 1] INFO  SNSelfOrder.App:  PageImage:6228
+2022-06-14 20:12:14,242 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 20:12:14,328 [ 1] INFO  SNSelfOrder.App:  posfastkey02:84
+2022-06-14 20:12:14,337 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:7
+2022-06-14 20:12:14,394 [ 1] INFO  SNSelfOrder.App:  psitem:55
+2022-06-14 20:12:14,398 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 20:12:14,400 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 20:12:14,563 [ 1] INFO  SNSelfOrder.App:  modifier:18
+2022-06-14 20:12:14,564 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 20:12:14,613 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:2
+2022-06-14 20:12:14,613 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908343346137031
+2022-06-14 20:12:14,879 [ 1] INFO  SNSelfOrder.App:  itemmodifier:262
+2022-06-14 20:12:14,879 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908343348795443
+2022-06-14 20:12:14,958 [ 1] INFO  SNSelfOrder.App:  itemvariety:52
+2022-06-14 20:12:14,968 [ 1] INFO  SNSelfOrder.App:  promotions:2
+2022-06-14 20:12:14,968 [ 1] INFO  SNSelfOrder.App:  end download check 
+[Header]2022-06-14 20:15:10,256 [ 1] INFO  SNSelfOrder.App: ==Startup=====================>>>
+2022-06-14 20:15:10,272 [ 1] INFO  SNSelfOrder.App: Config:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:15:10,273 [ 1] INFO  SNSelfOrder.App: App_root path=:C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:15:10,273 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:15:10,274 [ 1] INFO  SNSelfOrder.App: Application_Startup at C:\Users\user\source\repos\SNSelfOrder\bin\Debug\net5.0-windows\
+2022-06-14 20:15:10,274 [ 1] INFO  SNSelfOrder.App: PRPosUtils App Root Path =C:\Users\user\Desktop\SNSelfOrder
+2022-06-14 20:15:10,274 [ 1] INFO  SNSelfOrder.App: data source=C:\Users\user\Desktop\SNSelfOrder\db\prposdb.db3
+2022-06-14 20:15:10,885 [ 1] INFO  SNSelfOrder.App: http://35.201.9.186/
+2022-06-14 20:15:10,885 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 20:15:10,885 [ 1] INFO  SNSelfOrder.App: zh-TW
+2022-06-14 20:15:10,885 [ 1] INFO  SNSelfOrder.App: NT$
+2022-06-14 20:15:10,885 [ 1] INFO  SNSelfOrder.App: yyyy'年'M'月'd'日'
+2022-06-14 20:15:10,885 [ 1] INFO  SNSelfOrder.App: yyyy/M/d
+2022-06-14 20:15:10,885 [ 1] INFO  SNSelfOrder.App: tt hh:mm:ss
+2022-06-14 20:15:11,935 [ 1] INFO  SNSelfOrder.App: CheckCode send:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"","Message":"","Token":"","CustomerID":"","Store_code":"","ExpiryDate":"","Pos_Code":"","Pos_Name":"","PosID":"","CustomerName":"","Set_Code":"","AccessCode":"","Config_code":"","SalePriceColumn":"","TakeawayPriceColumn":"","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 20:15:12,384 [ 1] INFO  SNSelfOrder.App:  CheckCode return:{"Code":"01036027","MAC":"1C-1B-0D-EC-67-CF","RetCode":"0","Message":"","Token":"bda40e497aaa409ca6313fc0275cbd32","CustomerID":"3","Store_code":"TW","ExpiryDate":"24/03/2023","Pos_Code":"OT DEV1","Pos_Name":"For Dev","PosID":"17","CustomerName":"Orange Tea","Set_Code":"OT TW","AccessCode":"1kBa8V6TI28XdSfMYy/PTAQk","Config_code":"OT CV Cfg","SalePriceColumn":"sprice","TakeawayPriceColumn":"sprice2","UBereatPriceColumn":"","PhoneOrderPriceColumn":""}
+2022-06-14 20:15:12,438 [ 1] INFO  SNSelfOrder.App: doCheck 
+2022-06-14 20:15:12,493 [ 4] ERROR SNSelfOrder.App:  CheckCode 2 :0
+2022-06-14 20:15:19,276 [ 1] INFO  SNSelfOrder.App: image path is C:\Users\user\Desktop\SNSelfOrder\images
+2022-06-14 20:15:19,278 [ 1] INFO  SNSelfOrder.App:  PageImage:8499
+2022-06-14 20:15:19,281 [ 1] INFO  SNSelfOrder.App:  mod_button:0
+2022-06-14 20:15:19,365 [ 1] INFO  SNSelfOrder.App:  posfastkey02:82
+2022-06-14 20:15:19,374 [ 1] INFO  SNSelfOrder.App:  posfastkey02 image:6
+2022-06-14 20:15:19,427 [ 1] INFO  SNSelfOrder.App:  psitem:52
+2022-06-14 20:15:19,431 [ 1] INFO  SNSelfOrder.App:  psitem image:3
+2022-06-14 20:15:19,433 [ 1] INFO  SNSelfOrder.App:  itemcombo:1
+2022-06-14 20:15:19,583 [ 1] INFO  SNSelfOrder.App:  modifier:20
+2022-06-14 20:15:19,584 [ 1] INFO  SNSelfOrder.App:  modifier image:0
+2022-06-14 20:15:19,653 [ 1] INFO  SNSelfOrder.App:  psmodsetti image:3
+2022-06-14 20:15:19,653 [ 1] INFO  SNSelfOrder.App:   ItemModValue:637908345196536404
+2022-06-14 20:15:20,013 [ 1] INFO  SNSelfOrder.App:  itemmodifier:357
+2022-06-14 20:15:20,013 [ 1] INFO  SNSelfOrder.App:   ItemVarietyValue:637908345200138118
+2022-06-14 20:15:20,108 [ 1] INFO  SNSelfOrder.App:  itemvariety:65
+2022-06-14 20:15:20,130 [ 1] INFO  SNSelfOrder.App:  promotions:4
+2022-06-14 20:15:20,130 [ 1] INFO  SNSelfOrder.App:  end download check 

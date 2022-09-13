@@ -1,0 +1,10 @@
+TxnRef:220214180107047
+ResponseCode:A1
+ResponseText:Recursive Call
+Rrn:123456789012
+Stan:0
+PAD:OPR00899|KIOSKAMT003670PCM0010
+AuthCode:123456
+Date:140222
+Time:180102
+AmtPurchase:6.7

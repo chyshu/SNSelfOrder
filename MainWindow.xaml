@@ -1,0 +1,648 @@
+﻿<Window x:Class="SNSelfOrder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"              
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:ax="clr-namespace:AxCSDEFTLib;assembly=AxCSDEFTLib"
+        xmlns:local="clr-namespace:SNSelfOrder"
+        xmlns:Helper="clr-namespace:SNSelfOrder.Helpers"
+        mc:Ignorable="d"
+        d:DesignHeight="1920" 
+        d:DesignWidth="1080"         
+        WindowStyle="None"
+        WindowStartupLocation="Manual"
+        ShowInTaskbar="False" 
+        Left="{Binding Path=WindowLeft, Mode=TwoWay}" 
+        Top="{Binding Path=WindowTop, Mode=TwoWay}" 
+        Height="{Binding Path=WindowHeight, Mode=TwoWay}" 
+        Width="{Binding Path=WindowWidth, Mode=TwoWay}"  
+        Title="MainWindow"
+        Visibility="{Binding Path=WindowIsVisible, Mode=TwoWay, Converter={StaticResource VisibilityConverter}}"          
+        IsVisibleChanged="Window_IsVisibleChanged"  
+        ManipulationBoundaryFeedback="MainWindow_ManipulationBoundaryFeedback"
+        >
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0" />
+    </WindowChrome.WindowChrome>
+    <Grid Style="{StaticResource LayoutRootGridStyle}"   >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{StaticResource BannerHeight}" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="{StaticResource BottomHeight}" />
+        </Grid.RowDefinitions>
+        <ContentControl Grid.Row="2" Content="{Binding OcxContent}" Visibility="Collapsed"/>
+        <!--<WindowsFormsHost>
+            
+          <ax:AxCsdEft x:Name="eftCtrl" 
+                         GetLastReceiptEvent="eftCtrl_GetLastReceiptEvent" GetLastTransactionEvent="EftCtrl_GetLastTransactionEvent" 
+                          StatusEvent="EftCtrl_StatusEvent" TransactionEvent="EftCtrl_TransactionEvent" DisplayEvent="EftCtrl_DisplayEvent"
+                          DisplaySettlementEvent="eftCtrl_DisplaySettlementEvent" DisplayStatusEvent="eftCtrl_DisplayStatusEvent" 
+                         PrintReceiptEvent="EftCtrl_PrintReceiptEvent">
+            </ax:AxCsdEft>
+         
+        </WindowsFormsHost>   -->
+        <!-- background image goes here -->
+        <Image x:Name="test" Panel.ZIndex="{Binding PagesZIndex[0]}"
+               Grid.RowSpan="3"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+               Stretch="Fill"
+               Source="{Binding BackgroundImagePath, Converter={StaticResource BitmapImageConverter},  TargetNullValue={x:Null}}"
+               Margin="0">
+        </Image>
+        <!-- banner grid-->
+        <Grid Grid.Row="0"   Panel.ZIndex="{Binding PagesZIndex[1]}" >
+            <Rectangle  Height="{StaticResource Banner_height}" 
+                        Width="{Binding WindowWidth}"  >
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="{Binding CurrentBannerImagePath, Converter={StaticResource BitmapImageConverter}, TargetNullValue={x:Null}}" Stretch="Fill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Grid>
+        <!-- Items -->
+        <Grid Grid.Row="1" Margin="0"  Panel.ZIndex="{Binding PagesZIndex[1]}" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- This section shows the main sections of the menu that are available.
+            It goes horizontally across the page -->
+            <Grid Grid.Row="0" x:Name="MainMenuGrid"   >
+                <Border Style="{StaticResource SectionBorderStyle}"/>
+                <ListBox x:Name="MainMenuListBox"                                               
+                         ItemsSource="{Binding MainMenu,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource MainMenuListBoxStyle}"
+                         ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                         ScrollViewer.VerticalScrollBarVisibility="Disabled"                         
+                         ScrollViewer.CanContentScroll="false"
+                         ScrollViewer.PanningMode="Both"                         
+                         ItemContainerStyle="{StaticResource MainMenuListItemStyle}"
+                         ItemTemplate="{StaticResource MainMenuItemDataTemplate}"          
+                         SelectedItem="{Binding SelectedMainMenu, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                         SelectionChanged="MainMenuListBox_SelectionChanged"
+                         >
+ 
+                </ListBox>
+            </Grid>
+
+            <!-- The items for the selected main menu item -->
+            <Grid Grid.Row="1" x:Name="ItemGrid"
+                  Margin="0,10,0,10">
+                <Border Style="{StaticResource SectionBorderStyle}" />
+                <ListBox x:Name="ItemsListBox"
+                         Grid.Row="0"
+                         Grid.Column="0"
+                         ItemsSource="{Binding SelectedMainMenu.FastkeyItems,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                         ItemTemplate="{StaticResource ItemCardDataTemplate}"
+                         Style="{StaticResource ItemsListBoxStyle}"
+                         ItemContainerStyle="{StaticResource ItemCardContainerStyle}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"
+                                       HorizontalAlignment="Stretch"
+                                       Width="Auto" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </Grid>
+        </Grid>
+
+        <!-- Order totals/buttons -->
+        <Grid Grid.Row="2" Style="{StaticResource LayoutItemQtyGridStyle}" Panel.ZIndex="{Binding PagesZIndex[1]}"  >
+            <Border Style="{StaticResource ItemsQtyBorderStyle}">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0"                            
+                            Style="{DynamicResource ItemsCancelButtonStyle}" 
+                             Command="{Binding CancelOrderCmd}" />
+                    <!--Totals section at bottom of page.-->
+                    <Grid Grid.Column="1"  Style="{StaticResource ItemsOrderInfoGridStyle}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="5" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="5" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.ColumnSpan="9"
+                                Style="{StaticResource ItemsOrderInfoBorderStyle}"/>
+                        <TextBlock Grid.Column="1"
+                                   Text="Items:"
+                                   VerticalAlignment="Center"
+                                   Style="{StaticResource BaseTextBlockStyle}" />
+                        <TextBlock Grid.Column="3"
+                                   Text="{Binding ItemCount}"
+                                   VerticalAlignment="Center"
+                                   Style="{StaticResource BaseTextBlockStyle}" />
+                        <TextBlock Grid.Column="5"
+                                   Text="|  Order Total:"
+                                   VerticalAlignment="Center"
+                                   Style="{StaticResource BaseTextBlockStyle}" />
+                        <TextBlock Grid.Column="7"
+                                   Text="{Binding TotalPrice, StringFormat='\{0:$0.00; }'}"
+                                   VerticalAlignment="Center"
+                                   Style="{StaticResource BaseTextBlockStyle}" />
+                    </Grid>
+
+                    <Button Grid.Column="2"
+                            Grid.ColumnSpan="3"
+                            Style="{DynamicResource ItemsGoButtonStyle}"
+                            Visibility="{Binding CanPay, Converter={StaticResource VisibilityConverter}}"
+                            Command="{Binding CheckoutCmd}" />
+                </Grid>
+            </Border>
+        </Grid>
+     
+        <!-- StartUp message -->
+        <Grid Grid.RowSpan="3"  Panel.ZIndex="{Binding PagesZIndex[2]}"
+              x:Name="StartupGrid" 
+              Visibility="{Binding DisplayStartup, Converter={StaticResource VisibilityConverter}}">
+            <Image x:Name="StartupImage"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+                Stretch="Fill"
+               Source="{Binding StartupImagePath, Converter={StaticResource BitmapImageConverter}, TargetNullValue={x:Null}}"                                   
+               Margin="0">
+                <b:Interaction.Triggers>
+                    <!--
+                    <b:EventTrigger EventName="MouseLeftButtonDown">
+                        <b:InvokeCommandAction Command="{Binding  StartImgClick }"  CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=BitmapImage}}" />
+                    </b:EventTrigger>
+                  -->
+                    <b:EventTrigger EventName="MouseLeftButtonDown">
+                        <b:CallMethodAction TargetObject="{Binding}"  MethodName="StartImgClick" />
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+            </Image>
+        </Grid>
+
+        <!-- CancelOrder Message  -->
+        <Grid Grid.RowSpan="3" Panel.ZIndex="{Binding PagesZIndex[3]}"
+              x:Name="CancelOrderGrid" 
+              Visibility="{Binding DispCancelOrder, Converter={StaticResource VisibilityConverter}}">
+            <Border
+                Background="#88000000"/>
+            <!--PreviewMouseDown="Border_PreviewMouseDown"
+                    PreviewTouchDown="Border_PreviewTouchDown"/>-->
+
+            <Grid VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Width="700"
+                        MinHeight="500"
+                        Background="Transparent">
+                <!--PreviewMouseDown="Border_PreviewMouseDown"
+                  PreviewTouchDown="Border_PreviewTouchDown">-->
+                <Border Style="{StaticResource PopupBorderStyle}"  ></Border>
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="62" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="3*" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" 
+                          Margin="-9"
+                          Background="Orange">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding MsgCancelOrder}"
+                                       Margin="10"
+                                       FontWeight="Bold"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       TextWrapping="Wrap"
+                                       Foreground="DarkBlue"
+                                       FontSize="20pt"/>
+
+
+                        </StackPanel>
+                    </Grid>
+                    <TextBlock Grid.Row="1" 
+                               Margin="40,0"
+                               Text="Do you want to Cancel your order?"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               TextWrapping="Wrap"
+                               Foreground="DarkBlue"     
+                               FontSize="24pt" />
+
+                    <StackPanel Grid.Row="2" 
+                                Orientation="Horizontal" 
+                                HorizontalAlignment="Center">
+                        <Button Content="No"
+                                Style="{StaticResource NoButtonStyle}"
+                                Command="{Binding CancelOrderNoCmd}"/>
+                        <Button Margin="100,0,0,0"
+                                Content="Yes"
+                                Style="{StaticResource YesButtonStyle}"
+                                Command="{Binding CancelOrderYesCmd}"/>
+                    </StackPanel>
+
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <!-- Check message -->
+        <Grid Grid.RowSpan="3" Panel.ZIndex="{Binding PagesZIndex[4]}"  
+             x:Name="ChechEFTPosGrid" Background="Black" >
+            <!--
+            Visibility="{Binding DisplayCheckMessagePage, Converter={StaticResource VisibilityConverter}}"> 
+            -->
+            <Image x:Name="ChechEFTPosImage"  
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"
+                   Stretch="Fill"
+                   Source="{Binding CheckImagePath, Converter={StaticResource BitmapImageConverter}, TargetNullValue={x:Null}}"                                   
+                   Margin="0">
+            </Image>
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"></RowDefinition>
+                    <RowDefinition Height="1.2*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.9*"></ColumnDefinition>
+                    <ColumnDefinition Width="3.2*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.9*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding CheckMessageTitle}"  VerticalAlignment="Center" TextAlignment="Center"
+                       HorizontalAlignment="Stretch"  TextWrapping="Wrap"  Foreground="White"   FontSize="{StaticResource TitleFontSize}" FontWeight="Bold" />
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding CheckMessage}"  VerticalAlignment="Center" TextAlignment="Center"
+                       HorizontalAlignment="Stretch"  TextWrapping="Wrap"  Foreground="White"   FontSize="{StaticResource DefaultFontSize}"  FontWeight="Bold" />
+            </Grid>
+        </Grid>
+
+        <!--Connection Code Message -->
+        <Grid Grid.RowSpan="3" Panel.ZIndex="{Binding PagesZIndex[5]}"   
+              x:Name="ConnectionGrid" 
+              Visibility="{Binding DisplayConnectionCode, Converter={StaticResource VisibilityConverter}}">
+            <Image 
+                    HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"
+                    Stretch="Fill"
+                   Source="{Binding CheckImagePath, Converter={StaticResource BitmapImageConverter}, TargetNullValue={x:Null} }"                                   
+                   Margin="0">
+            </Image>
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"></RowDefinition>
+                    <RowDefinition Height="1.2*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.9*"></ColumnDefinition>
+                    <ColumnDefinition Width="3.2*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.9*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding ConnectionMessageTitle}"  VerticalAlignment="Center" TextAlignment="Center"
+                       HorizontalAlignment="Stretch"  TextWrapping="Wrap"  Foreground="White"   FontSize="{StaticResource TitleFontSize}" FontWeight="Bold" />
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding ConnectionMessage}"  VerticalAlignment="Center" TextAlignment="Center"
+                       HorizontalAlignment="Stretch"  TextWrapping="Wrap"  Foreground="White"   FontSize="{StaticResource DefaultFontSize}"  FontWeight="Bold" />
+            </Grid>
+        </Grid>
+
+        <!-- Order Type Page -->
+        <Grid Grid.RowSpan="3"  Panel.ZIndex="{Binding PagesZIndex[6]}" 
+              x:Name="OrderTypeGrid" 
+              Visibility="{Binding DisplayOrderTypePage, Converter={StaticResource VisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="{StaticResource BottomHeight}" />
+            </Grid.RowDefinitions>
+            <Image x:Name="OrderTypeImage"    Grid.RowSpan="2" 
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Stretch="Fill"   Source="{Binding CheckImagePath, Converter={StaticResource BitmapImageConverter}, TargetNullValue={x:Null}}" 
+                   Margin="0">
+            </Image>
+            <Grid Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="4.2*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Style="{StaticResource PaymentHeaderTextBlockStyle}" 
+                        Text="{Binding Caption_OrderTypePage}"   TextWrapping="Wrap">
+                </TextBlock>
+
+                <Button  Grid.Row="2" Grid.Column="1"  Style="{StaticResource DigitalButtonStyle}"  Command="{Binding OrderTypeCommand}"  CommandParameter="1">
+                    <Button.Content>
+                        <TextBlock   Text="DINE IN" FontSize="46"/>
+                    </Button.Content>
+                </Button>
+                <Button Grid.Row="2" Grid.Column="3" Style="{StaticResource DigitalButtonStyle}"  Command="{Binding OrderTypeCommand}"  CommandParameter="2">
+                    <Button.Content>
+                        <TextBlock Text="TAKEAWAY" FontSize="46"/>
+                    </Button.Content>
+                </Button>
+
+            </Grid>
+        </Grid>
+
+        <!-- Table Number Page  -->
+        <Grid Grid.RowSpan="3" Panel.ZIndex="{Binding PagesZIndex[7]}"
+              x:Name="TableNumberGrid" 
+              Visibility="{Binding DisplayTableNumberPage, Converter={StaticResource VisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.8*"/>
+                <RowDefinition Height="3.2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.RowSpan="4"
+                    HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"
+                    Stretch="Fill"
+                   Source="{Binding CheckImagePath, Converter={StaticResource BitmapImageConverter}, TargetNullValue={x:Null}}"                                   
+                   Margin="0">
+            </Image>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                    <ColumnDefinition Width="1.5*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock TextWrapping="Wrap"  Text="{Binding Caption_BuzzerPage}" TextAlignment="Center"  VerticalAlignment="Top"
+                           Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4"   FontSize="40" FontWeight="Bold" Foreground="White" />
+                <TextBox HorizontalAlignment="Stretch"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" FontSize="48" FontWeight="Bold"
+                     Text="{Binding TableNumber}"
+                     VerticalAlignment="Stretch" VerticalContentAlignment="Center"  HorizontalContentAlignment="Left"  x:Name="tableNumber">
+                    <TextBox.BorderBrush>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+                    </TextBox.BorderBrush>
+                </TextBox>
+                <TextBlock x:Name="txtTableNumberMessage" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" 
+                           Text="{Binding Message_BuzzerPage}"  VerticalAlignment="Top" TextAlignment="Center" 
+                         HorizontalAlignment="Stretch"  TextWrapping="Wrap"  Foreground="White"   FontWeight="Bold"  FontSize="{StaticResource DefaultFontSize}" />
+            </Grid>
+            
+        </Grid>
+        <!-- Person/Cover Page   -->
+        <Grid Grid.RowSpan="3" Panel.ZIndex="{Binding PagesZIndex[8]}"
+              x:Name="CoverGrid" 
+              Visibility="{Binding DisplayCoverPage, Converter={StaticResource VisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.8*"/>
+                <RowDefinition Height="3.2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.RowSpan="4"
+                    HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"
+                    Stretch="Fill"
+                   Source="{Binding CheckImagePath, Converter={StaticResource BitmapImageConverter}, TargetNullValue={x:Null}}"                                   
+                   Margin="0">
+            </Image>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                    <ColumnDefinition Width="1.5*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock TextWrapping="Wrap"  Text="{Binding Caption_CoverPage}" TextAlignment="Center"   Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4"
+                           FontSize="40" FontWeight="Bold" Foreground="White" VerticalAlignment="Top" />
+                <TextBox HorizontalAlignment="Stretch"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" FontSize="48" FontWeight="Bold"
+                     Text="{Binding Cover}"
+                     VerticalAlignment="Stretch" VerticalContentAlignment="Center"  HorizontalContentAlignment="Left"  x:Name="coverPage">
+                    <TextBox.BorderBrush>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+                    </TextBox.BorderBrush>
+                </TextBox>
+
+
+                <TextBlock x:Name="txtCoverPageMessage" Grid.Column="1"  Grid.ColumnSpan="4"   Grid.Row="3"  Text="{Binding Message_CoverPage}"  VerticalAlignment="Center" TextAlignment="Center" 
+                         HorizontalAlignment="Stretch"  TextWrapping="Wrap"  Foreground="White"   FontWeight="Bold"  FontSize="{StaticResource DefaultFontSize}" />
+            </Grid>
+        </Grid>
+
+        <!-- Member Page   -->
+        <Grid Grid.RowSpan="3" Panel.ZIndex="{Binding PagesZIndex[9]}"
+              x:Name="MemberGrid" 
+              Visibility="{Binding DisplayMemberCardPage, Converter={StaticResource VisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.8*"/>
+                <RowDefinition Height="3.2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.RowSpan="4"
+                    HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"
+                    Stretch="Fill"
+                   Source="{Binding CheckImagePath, Converter={StaticResource BitmapImageConverter}, TargetNullValue={x:Null}}"                                   
+                   Margin="0">
+            </Image>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                    <ColumnDefinition Width="1.5*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock TextWrapping="Wrap"  Text="{Binding Caption_MemberCardPage}" TextAlignment="Center"   VerticalAlignment="Top"
+                           Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4"   FontSize="40" FontWeight="Bold" Foreground="White" />
+                <TextBox HorizontalAlignment="Stretch"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" FontSize="48" FontWeight="Bold"
+                     Text="{Binding MemberCard}"
+                     VerticalAlignment="Stretch" VerticalContentAlignment="Center"  HorizontalContentAlignment="Left"  x:Name="membercardPage">
+                    <TextBox.BorderBrush>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+                    </TextBox.BorderBrush>
+                </TextBox>
+
+
+                <TextBlock x:Name="txtMemberCardPageMessage" Grid.Column="1"  Grid.ColumnSpan="4"   Grid.Row="3"  Text="{Binding Message_MemberCardPage}"  
+                          VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch"  TextWrapping="Wrap"  Foreground="White"   FontWeight="Bold" 
+                           FontSize="{StaticResource DefaultFontSize}" />
+            </Grid>
+        </Grid>
+        
+        <!-- NumberPad page -->
+        <Grid Grid.RowSpan="3" Panel.ZIndex="{Binding PagesZIndex[10]}"
+              x:Name="NumberPadGrid"  Height="{Binding NumerPadHeight}" VerticalAlignment="Bottom"   Background="Transparent"  
+              Visibility="{Binding DisplayNumberPadPage, Converter={StaticResource VisibilityConverter}}">
+            <Grid Grid.Row="0" local:GridHelpers.RowCount="{Binding RowCount}"  >
+               
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                    <ColumnDefinition Width="1.5*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="1" x:Name="btn01" Grid.Row="0" Grid.Column="1" Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}" CommandParameter="1" />
+                <Button Content="2" x:Name="btn02" Grid.Row="0" Grid.Column="2" Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="2"/>
+                <Button Content="3" x:Name="btn03" Grid.Row="0" Grid.Column="3" Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="3" />
+                <Button Content="C" x:Name="btnC"  Grid.Row="0" Grid.Column="4" Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}" CommandParameter="C" />
+                <Button Content="4" x:Name="btn04" Grid.Row="1" Grid.Column="1" Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"   CommandParameter="4"/>
+                <Button Content="5" x:Name="btn05" Grid.Row="1" Grid.Column="2" Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="5" />
+                <Button Content="6" x:Name="btn06" Grid.Row="1" Grid.Column="3" Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="6"/>
+                <Button  x:Name="btnBack" Grid.Row="1" Grid.Column="4"  Style="{StaticResource DigitalButtonStyle}"  Command="{Binding ButtonCommand}"   CommandParameter="B">
+                    <TextBlock TextWrapping="Wrap"  Text="Back space" TextAlignment="Center" />
+                </Button>
+                <Button Content="7"   x:Name="btn07" Grid.Row="2" Grid.Column="1"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="7" />
+                <Button Content="8"  x:Name="btn08" Grid.Row="2" Grid.Column="2"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="8"/>
+                <Button Content="9"  x:Name="btn09" Grid.Row="2" Grid.Column="3"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="9"/>
+                <Button Content="0"   x:Name="btn0" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="0" />
+                <Button Content="."   x:Name="btnDot" Grid.Row="3" Grid.Column="3"   Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="." />
+                <Button Content="Enter" x:Name="btnE" Grid.Row="2" Grid.Column="4"  Grid.RowSpan="2"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="E" />
+
+
+            </Grid>
+ 
+        </Grid>
+
+        <!--  Bottom LINE -->
+        <Grid Grid.Row="{Binding RowCount,Converter={StaticResource MinusConverter}}" Grid.Column="0" Grid.ColumnSpan="{Binding ColumnCount}"  Panel.ZIndex="{Binding  PagesZIndex[11]}" 
+              Style="{StaticResource GirdItemButtonStyle}" ShowGridLines="False" HorizontalAlignment="Stretch" Background="Transparent">
+            <Border Style="{StaticResource GoBackBorderStyle}">
+                <Grid  >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Grid.Row="0" Style="{DynamicResource ItemCancelButtonStyle}"  Command="{Binding GoBackCommand}" >
+                    </Button>
+                </Grid>
+            </Border>
+        </Grid>
+        <!-- Time Out message -->
+        <Grid Grid.RowSpan="3"   Panel.ZIndex="{Binding PagesZIndex[12]}"
+              x:Name="MessageGrid" 
+              Visibility="{Binding DisplayTimeoutMsg, Converter={StaticResource VisibilityConverter}}">
+            <Border
+                Background="#88000000"/>
+            <!--PreviewMouseDown="Border_PreviewMouseDown"
+                    PreviewTouchDown="Border_PreviewTouchDown"/>-->
+
+            <Grid VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Width="640"
+                        MinHeight="450"
+                        Background="Transparent">
+                <!--PreviewMouseDown="Border_PreviewMouseDown"
+                  PreviewTouchDown="Border_PreviewTouchDown">-->
+                <Border Style="{StaticResource PopupBorderStyle}"></Border>
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.6*" />
+                        <RowDefinition Height="3.4*" />
+                        <RowDefinition Height="1.2*" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0"  Margin="-9" Background="Orange">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding MsgTimeoutCount, Mode=OneWay}"
+                                       Margin="10"
+                                       FontWeight="Bold"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       TextWrapping="Wrap"
+                                       Foreground="DarkBlue"
+                                       FontSize="20pt"/>
+                            <TextBlock Text="Seconds Remaining"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       TextWrapping="Wrap"
+                                       Foreground="DarkBlue"
+                                       FontSize="20pt"/>
+
+                        </StackPanel>
+                    </Grid>
+                    <TextBlock Grid.Row="1" 
+                               Margin="40,0"
+                               Text="{Binding TimeOutMessage}"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               TextWrapping="Wrap"
+                               Foreground="DarkBlue"     
+                               FontSize="24pt" />
+
+                    <Grid Grid.Row="2"  HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="No" Grid.Column="1" HorizontalAlignment="Stretch"
+                                Style="{StaticResource PopupCancelButtonStyle}"
+                                Command="{Binding TimeOutPageMoreTimeNoCmd, Mode=OneWay}"  />
+                        <Button Margin="0" Grid.Column="3"  HorizontalAlignment="Stretch"
+                                Content="Yes"
+                                Style="{StaticResource PopupGoButtonStyle}"
+                                Command="{Binding TimeOutPageMoreTimeYesCmd}"/>
+                    </Grid>
+
+                </Grid>
+            </Grid>
+        </Grid>
+      
+    </Grid>
+</Window>

@@ -1,0 +1,82 @@
+﻿<Window x:Class="SNSelfOrder.ConnectionCode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SNSelfOrder"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="Manual"
+        ShowInTaskbar="False" 
+        Left="{Binding Path=WindowLeft, Mode=TwoWay}" 
+        Top="{Binding Path=WindowTop, Mode=TwoWay}" 
+        Height="{Binding Path=WindowHeight, Mode=TwoWay}" 
+        Width="{Binding Path=WindowWidth, Mode=TwoWay}"  
+            Visibility="{Binding Path=WindowIsVisible, Mode=TwoWay, Converter={StaticResource VisibilityConverter}}" 
+        Title="ConnectionCode" >
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0" />
+    </WindowChrome.WindowChrome>
+    <Grid  x:Name="LayoutRoot"  ShowGridLines="False"  Style="{StaticResource LayoutRootGridStyle}"  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.8*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock TextWrapping="Wrap"  Text="Connection Code" TextAlignment="Center"   Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4"   FontSize="40" FontWeight="Bold" Foreground="White" />
+            <TextBox HorizontalAlignment="Stretch"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" FontSize="48" FontWeight="Bold"
+                     Text="{Binding ConnectionCode}"
+                     VerticalAlignment="Stretch" VerticalContentAlignment="Center"  HorizontalContentAlignment="Left"  x:Name="connectionCode">
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowTextColorKey}}"/>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <Button Content="1" x:Name="btn01" Grid.Row="2" Grid.Column="1"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}" CommandParameter="1" />
+            <Button Content="2" x:Name="btn02" Grid.Row="2" Grid.Column="2" Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="2"/>
+            <Button Content="3" x:Name="btn03" Grid.Row="2" Grid.Column="3" Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="3" />
+            <Button Content="C" x:Name="btnC"  Grid.Row="2" Grid.Column="4"   Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}" CommandParameter="C" />
+            <Button Content="4" x:Name="btn04" Grid.Row="3" Grid.Column="1"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"   CommandParameter="4"/>
+            <Button Content="5" x:Name="btn05" Grid.Row="3" Grid.Column="2"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="5" />
+            <Button Content="6" x:Name="btn06" Grid.Row="3" Grid.Column="3"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="6"/>
+            <Button  x:Name="btnBack" Grid.Row="3" Grid.Column="4"  Style="{StaticResource DigitalButtonStyle}"  Command="{Binding ButtonCommand}"   CommandParameter="B">
+                <TextBlock TextWrapping="Wrap"  Text="Back space" TextAlignment="Center" />
+            </Button>
+            <Button Content="7"   x:Name="btn07" Grid.Row="4" Grid.Column="1"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="7" />
+            <Button Content="8"  x:Name="btn08" Grid.Row="4" Grid.Column="2"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="8"/>
+            <Button Content="9"  x:Name="btn09" Grid.Row="4" Grid.Column="3"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="9"/>
+            <Button Content="0"   x:Name="btn0" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="0" />
+            <Button Content="."   x:Name="btnDot" Grid.Row="5" Grid.Column="3"   Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="." />
+            <Button Content="Enter" x:Name="btnE" Grid.Row="4" Grid.Column="4"  Grid.RowSpan="2"  Style="{StaticResource DigitalButtonStyle}" Command="{Binding ButtonCommand}"  CommandParameter="E" />
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="txtMessage" Grid.Column="1"  Text="{Binding DisplayMessage}"  VerticalAlignment="Center" TextAlignment="Center" 
+                         HorizontalAlignment="Stretch"  TextWrapping="Wrap"  Foreground="White"   FontWeight="Bold"  FontSize="{StaticResource DefaultFontSize}" />
+        </Grid>
+    </Grid>
+</Window>
